@@ -93,63 +93,61 @@
                     <!-- 搜索框  -->
                     <el-row>
                         <el-col>
-                            <el-autocomplete class="inline-input" v-model="key" :fetch-suggestions="querySearch" placeholder="请输入作品名关键词">
+                            <el-autocomplete style="width: 100%" popper-class="my-autocomplete" class="inline-input" v-model="this.key" :fetch-suggestions="querySearch" placeholder="请输入作品名关键词" maxlength="5" clearable>
                                 <template slot="prepend">搜索题目</template>
                                 <el-button slot="append" icon="search"></el-button>
                             </el-autocomplete>
                         </el-col>
                     </el-row>
                     <br>
-                    <el-table :data="pageresult" 
-
-                    stripe
-                    max-height=" " style="width: 100%" border ref="multipleTable" :default-sort="{prop: 'time', order: 'descending'}">
+                    <el-table :data="pageresult" stripe max-height="750" style="width: 100%" border ref="multipleTable" :default-sort="{prop: 'time', order: 'descending'}">
                         <el-table-column align="left" sortable label="编号" prop="name" width="90vw" fixed>
                             <template scope="scope">
                                 <span><b>{{  scope.row["id"] }}</b></span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="题目" prop="name" width="110vw">
+                        <el-table-column align="left" label="题目" prop="name" width="110vw" fixed>
                             <template scope="scope">
                                 <span><b>{{  scope.row["标题"].replace( scope.row["id"]+".","").replace(" (Standard IO)","") }}</b></span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="题目描述" prop="name" width="400vw">
+                        <el-table-column align="left" label="题目描述" prop="name" width="400vw">
                             <template scope="scope">
                                 <span>{{  scope.row["题目描述"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="输入" prop="name" width="250vw">
+                        <el-table-column align="left" label="输入" prop="name" width="250vw">
                             <template scope="scope">
                                 <span>{{  scope.row["输入"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="输出" prop="name" width="250vw">
+                        <el-table-column align="left" label="输出" prop="name" width="250vw">
                             <template scope="scope">
                                 <span>{{  scope.row["输出"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="样例输入" prop="name" width="100vw">
+                        <el-table-column align="left" label="样例输入" prop="name" width="100vw">
                             <template scope="scope">
                                 <span>{{  scope.row["样例输入"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="样例输出" prop="name" width="100vw">
+                        <el-table-column align="left" label="样例输出" prop="name" width="100vw">
                             <template scope="scope">
                                 <span>{{  scope.row["样例输出"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="数据范围" prop="name" width="100vw">
+                        <el-table-column align="left" label="数据范围" prop="name" width="100vw">
                             <template scope="scope">
                                 <span>{{  scope.row["数据范围限制"] }}</span>
                             </template>
                         </el-table-column>
-                        <el-table-column align="left" sortable label="参考答案" prop="name" width="180vw">
+                        <el-table-column align="left" label="参考答案" prop="name" width="180vw">
                             <template scope="scope">
                                 <el-collapse>
                                     <el-collapse-item title="点击查看答案" name="1">
                                         <template v-for="(key,value) in scope.row['参考答案']">
-                                            <el-tag type="warning" closable><a target="_black" :href="'./'+scope.row['id']+'/'+value">{{ value }}</a></el-tag><br>
+                                            <el-tag type="warning" closable><a target="_black" :href="'./'+scope.row['id']+'/'+value">{{ value }}</a></el-tag>
+                                            <br>
                                         </template>
                                     </el-collapse-item>
                                 </el-collapse>
@@ -174,18 +172,12 @@
                 loading: false,
                 key: "",
                 restaurants: [],
-                pagesize: 16,
+                pagesize: 1000,
                 pagenum: 1,
                 extsize: 0,
             }
         },
         methods: {
-            calc_url(_url) {
-                return './#' + encodeURIComponent(btoa(_url));
-            },
-            open_editor() {
-                //alert("功能还在测试中，敬请期待");
-            },
             handleCurrentChange(val) {
                 console.log("当前页: ${val}");
                 this.pagenum = val;
@@ -205,7 +197,6 @@
                             }
                             return b;
                         }
-
                         //this.restaurants = shuffle(response.data);
                         this.restaurants = response.data //.sort()//.reverse();
                         this.$emit('setloading', false);
@@ -251,7 +242,19 @@
         },
         computed: {
             "pageresult": function() {
-                return this.restaurants.slice(this.pagesize * this.pagenum - this.pagesize, this.pagesize * this.pagenum + this.extsize);
+                return this.findresult.slice(this.pagesize * this.pagenum - this.pagesize, this.pagesize * this.pagenum + this.extsize);
+            },
+            "findresult": function() {
+                if (this.key) {
+                    for (go in this.restaurants) {
+                        if (JSON.stringify(this.restaurants[go]).indexOf(this.key) != -1) {
+                            //console.log("发现结果"+go);
+                            return this.restaurants.slice(go, go + 1);
+                        }
+                    }
+                } else {
+                    return this.restaurants;
+                }
             }
         },
         mounted() {
