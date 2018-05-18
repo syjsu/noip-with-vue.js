@@ -1,0 +1,16 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<cstring>
+using namespace std;
+int main()
+{
+    double n,m,a;
+    long long c,d,e;
+    cin>>n>>m>>a;
+    c=int(n/a);
+    d=int(m/a);
+    e=c*d;
+   cout<<e<<endl;
+    return 0;   
+}

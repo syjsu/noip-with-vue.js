@@ -1,0 +1,11 @@
+var r,x,y,z:real;
+i,p:longint;
+begin
+read(r,x,p);
+y:=(100+r)/100;
+z:=1;
+for i:=1 to p do 
+z:=z*y;
+z:=z*x;
+write(z:0:2);
+end.

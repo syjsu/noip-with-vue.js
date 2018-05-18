@@ -1,0 +1,9 @@
+var n,a,b,c:longint;
+begin
+read(n);
+a:=n mod 10;
+b:=n div 10 mod 10;
+c:=n div 100 mod 10;
+if (n=a*a*a+b*b*b+c*c*c) then write('YES')
+else write('NO');
+end.

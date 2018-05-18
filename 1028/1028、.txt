@@ -1,0 +1,30 @@
+1028 ≈–∂œª•÷ 
+
+8365 6462 ±®¥Ì
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	long long m,n,t;
+	cin>>m>>n;
+	if(m<=n){
+		t=m;
+		m=n;
+		n=t;
+	}
+	while(t!=0){
+		if(n==1)
+			break;
+		t=m%n;
+		m=n;
+		n=t;
+	}
+	if(n==1){
+		cout<<"Yes"<<endl;
+	}
+	else{
+		cout<<"No"<<endl;	
+	}
+	return 0; 
+} 

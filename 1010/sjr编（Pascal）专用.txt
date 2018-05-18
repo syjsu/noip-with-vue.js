@@ -1,0 +1,8 @@
+var n:longint;
+begin
+read(n);
+if n>30 then write('Fail')
+else if n<=10 then write(n*0.8+0.2:0:2)
+else if n<=20 then write(n*0.75+0.2+0.5:0:2) 
+else write(n*0.7+0.2+1.5:0:2);
+end.

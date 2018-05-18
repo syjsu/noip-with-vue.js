@@ -1,0 +1,36 @@
+#include<cstdio>
+int a[1000010],R,N;
+int main()
+{
+scanf("%d %d",&R,&N);
+for(int i=0;i<N;i++)
+{
+int l,t,w,h; scanf("%d %d %d %d",&l,&t,&w,&h);
+for(int i=l;i<l+w;i++) a[i]+=h;
+}
+int l=0,r=R,mid;
+long long left=0,right=0;
+while(r>l)
+{
+left=0; right=0; mid=(l+r)/2;
+for(int i=0;i<mid;i++) left+=a[i];
+for(int i=mid;i<R;i++) right+=a[i];
+if(r-l==1)
+{
+if(left>=right)
+{
+if(left+a[l]>=right-a[l] && (left+a[l]-(right-a[l])<=left-right)) l++;
+else break;
+}
+else l++;
+}
+else
+{
+if(left<=right) l=mid;
+if(left>right) r=mid;
+}
+}
+while(l+1<=R && a[l+1]==0) l++;
+printf("%d",l);
+return 0;
+}

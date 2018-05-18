@@ -1,0 +1,7 @@
+var
+n,m:real;
+begin
+read(n);
+m:=(n-32)*5/9;
+writeln(m:0:4); 
+end.

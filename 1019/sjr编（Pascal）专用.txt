@@ -1,0 +1,7 @@
+var n:real;
+begin
+readln(n);
+if (n>=0) and (n<5) then write(n+2.5:0:3);
+if (n>=5) and (n<10) then write(2-1.5*(n-3)*(n-3):0:3);
+if (n>=10) and (n<20) then write(n/2-1.5:0:3);
+end.

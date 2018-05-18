@@ -1,0 +1,23 @@
+var n,m,i,j,k:longint;
+    a,b:array[1..100000]of longint;
+begin
+read(n);
+ for i:=1 to n do
+  read(a[i]);
+read(m);
+for i:=1 to m do read(b[i]);
+for i:=1 to m do
+ begin
+  if b[i]<=a[1] then writeln(a[1]);
+  if b[i]>=a[n] then writeln(a[n]);
+  if(b[i]>a[1])and(b[i]<a[n])then
+   begin
+    j:=1;
+    repeat
+     j:=j+1;
+     k:=a[j]-b[i];
+    until k>=0;
+    if b[i]-a[j-1]>k then writeln(a[j])else writeln(a[j-1]);
+   end;
+ end;
+end.

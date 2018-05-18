@@ -1,0 +1,2 @@
+a,b,c = / in(Int)
+print(20 - a - b - c)

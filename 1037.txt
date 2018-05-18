@@ -1,0 +1,30 @@
+{
+  "输入": "一行两个空格隔开的正整数表示a和b。",
+  "题目描述": "计算ab的个位数。",
+  "参考答案": {
+    "重要提醒！.txt": "By xurunqi2005",
+    "POWERPNT.exe": "By 丁丁",
+    "noi.cpp": "By 天马行空",
+    "1037.txt": "By    P   C   L",
+    "acad.exe": "By fzsxlzc",
+    "wordicon.exe": "By hffzy",
+    "低端lowbee解法.txt": "By wr786",
+    "个位数.txt": "By 殷跃然",
+    "简单好用超级无敌变态闪瞎你双眼的pascal解法如有雷同你抄我的.txt": "By LoveAurora",
+    "x2.jpg": "By 丁丁",
+    "1037 a^b.cpp": "By 乌黑黑",
+    "(1037C)小学生AC.c": "By hjdmmm",
+    "个位数AC解法.cpp": "By eliot",
+    "1037Pascal题解.docx": "By 稳重的大喷菇",
+    "1037.cpp": "By 传奇英雄",
+    "秀才  个位数.cpp": "By 秀才",
+    "重要提醒.txt": "By xurunqi2005",
+    "个位数.docx": "By hffzy",
+    "SelfProtectAPI2.dll": "By 丁丁"
+  },
+  "样例输入": "2 4",
+  "数据范围限制": "1<=a,b<=100000",
+  "标题": "1037. 个位数 (Standard IO)",
+  "输出": "输出ab的个位数。",
+  "样例输出": "6"
+}

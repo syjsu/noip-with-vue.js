@@ -1,0 +1,27 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+using namespace std;
+int main(void)
+{
+	int ORI_n,RE_factor=2,PR_n;
+	cin>>ORI_n;
+	if(1==ORI_n){
+		cout<<1;
+	}else{
+		PR_n=sqrt(ORI_n);
+			for(int PR_i=2;PR_i<=PR_n;PR_i++)	
+			{
+				if((ORI_n%PR_i)==0&&(PR_i*PR_i!=ORI_n))	{
+					RE_factor+=2;
+				}else{
+						if(PR_i*PR_i==ORI_n){
+						RE_factor+=1;
+						}	
+				}
+			}
+		
+		cout<<RE_factor;
+		}
+	return 0;
+}

@@ -1,0 +1,10 @@
+var x,y:double;
+begin
+ read(x);
+ case trunc(x/5) of
+  0:y:=x+2.5;
+  1:y:=2-1.5*(x-3)*(x-3);
+  2,3:y:=x/2-1.5;
+ end;
+ write(y:0:3);
+end.

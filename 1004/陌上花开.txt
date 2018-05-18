@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+double n,m,a;
+long long k,b;
+int main()
+{
+    cin>>n>>m>>a;
+    k=int(n/a);
+    b=int(m/a);
+    cout<<k*b<<endl;
+    return 0;
+}

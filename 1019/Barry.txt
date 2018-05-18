@@ -1,0 +1,10 @@
+var f,x:real;
+begin
+  readln(x);
+  case trunc(x/5) of
+  0:f:=x+2.5;
+  1:f:=2-1.5*(x-3)*(x-3);
+  2,3:f:=x/2-1.5;
+  end;
+  writeln(f:0:3);
+  end.

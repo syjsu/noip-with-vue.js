@@ -1,0 +1,47 @@
+program p1053;
+ var
+  p1,p2,p3:1..8;
+  r,k:ansistring;
+  s:string;
+  c:char;
+  i,lk,j,l,t:longint;
+ function ok(x,y:char):boolean;
+  begin
+   ok := false;
+   if ((ord(x)>47) and (ord(x)<58)) and ((ord(y)>47)and(ord(y)<58))
+    then exit(true);
+   if ((ord(x)>96) and (ord(x)<123)) and ((ord(y)>96)and(ord(y)<123))
+    then exit(true);
+  end;
+ begin
+  readln (p1,p2,p3);
+  readln (s);
+  r := s[1];
+  l := length(s);
+  for i := 2 to l-1 do
+   if s[i]='-' then
+    begin
+     if ((ord(s[i-1]) >= ord(s[i+1])))or (not(ok(s[i-1],s[i+1])))
+      then r := r + '-'
+      else if ord(s[i+1])-ord(s[i-1])>1 then
+       begin
+        k:='';
+        if p3 = 1 then
+         for c := succ(s[i-1]) to pred(s[i+1]) do
+          for t := 1 to p2 do
+           k := k + c;
+        if p3 = 2 then
+         for c := pred(s[i+1]) downto succ(s[i-1]) do
+          for t := 1 to p2 do
+           k := k + c;
+        lk := length(k);
+        if p1 = 2 then for j := 1 to lk do
+          if (ord(k[j])>=97)and(ord(k[j])<=122) then k[j]:=chr(ord(k[j])-32);
+        if p1 = 3 then for j := 1 to lk do k[j]:='*';
+        r := r + k;
+       end;
+    end else r := r + s[i];
+  r := r + s[l];
+  writeln (r);
+ end.
+ 

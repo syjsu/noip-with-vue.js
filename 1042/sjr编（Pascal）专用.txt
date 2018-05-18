@@ -1,0 +1,50 @@
+var n,i,j,k,x,z:longint;
+    a,b,m:array[1..500]of longint;
+begin 
+readln(n);
+for i:=1 to n do
+ begin
+  read(m[i],x,z);
+  a[i]:=m[i]+x+z;
+  b[i]:=i;
+ end;
+for i:=1 to n do
+begin
+for j:=1 to n-i do
+begin
+  if a[j]<a[j+1] then
+   begin
+    k:=a[j];
+	a[j]:=a[j+1];
+	a[j+1]:=k;
+    k:=b[j];
+	b[j]:=b[j+1];
+	b[j+1]:=k;
+    k:=m[j];
+	m[j]:=m[j+1];
+	m[j+1]:=k;
+   end;
+   end;
+   end;
+for i:=1 to n do
+for j:=1 to n-i do
+if a[j]=a[j+1] then
+ begin
+  if m[j]<m[j+1] then
+   begin 
+   k:=b[j];
+   b[j]:=b[j+1];
+   b[j+1]:=k;
+   end;
+  if(m[j]=m[j+1])and(b[j]>b[j+1])then
+   begin 
+   k:=b[j];
+   b[j]:=b[j+1];
+   b[j+1]:=k;
+   end;
+ end;
+for i:=1 to 5 do
+begin
+writeln(b[i],' ',a[i]);
+end;
+end.

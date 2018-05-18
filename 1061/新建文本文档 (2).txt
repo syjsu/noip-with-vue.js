@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    char c;
+    string s,a;
+    a="NOIP@CCF";
+    cin>>c;
+    if(c=='Y')
+    {
+        while(1)
+        {
+            cin>>s;
+            if(s==a) 
+            {
+                cout<<"Success";
+                return 0;
+            }
+            else
+            {
+                cout<<"Sorry"<<endl;
+                cin>>c;
+                if(c=='N') return 0;
+            }
+        }
+    }
+}  

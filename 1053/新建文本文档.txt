@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cstdio>
+#include<string>
+#include<algorithm>
+int a[100][100],b[100][100];
+using namespace std;
+int main()
+{
+	int m,n,lm=0,ln=0,sml=0,o;
+	cin>>m>>n;
+	while(lm<m)
+	{
+		while(ln<n)
+		{
+			cin>>o;
+			a[lm][ln]=o;
+			ln++;
+		}
+		ln=0;
+		lm++;
+	}
+	ln=0;
+	lm=0;
+	while(lm<m)
+	{
+		while(ln<n)
+		{
+			cin>>o;
+			b[lm][ln]=o;
+			ln++;
+		}
+		ln=0;
+		lm++;
+	}
+	for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			if(a[i][j]==b[i][j])
+			{
+				sml++;
+			}
+		}
+	}
+	printf("%.2f",(float(sml)*1.0)/(float(m*n))*100);
+	return 0;
+}
+

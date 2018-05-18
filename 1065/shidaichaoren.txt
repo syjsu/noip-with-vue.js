@@ -1,0 +1,17 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int n,m,s,i=1;
+	cin>>n>>m;
+	do
+	{	
+	 s=i*n;
+		i++;
+	}
+	 while (s%m!=0);
+	 cout<<s<<endl;
+
+	return 0;
+}

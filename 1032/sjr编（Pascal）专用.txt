@@ -1,0 +1,12 @@
+var k,m,n:shortint;
+begin
+read(n);
+for m:=1 to 2*n-1 do
+begin
+for k:=1 to abs(m-n) do
+write(' ');
+for k:=1 to 2*n-2-1*abs(m-n) do
+write(k);
+writeln;
+end;
+end.

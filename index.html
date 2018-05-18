@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>魔法编程免费学习平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 参考文档 -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |   https://cn.vuejs.org/v2/guide/instance.html                     |-->
+    <!-- |   https://router.vuejs.org/zh-cn/essentials/getting-started.html  |-->
+    <!-- |   http://element.eleme.io/#/zh-CN/component/installation          |-->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- 备注： -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |   最终生成的文件结构如下，使用webpack打包                              |-->
+    <!-- |   调试页面上，暂时把所有.vue单文件组件写在一页                           |-->
+    <!-- |   实际部署时，请按照以下顺序自行组装脚手架                               |-->
+    <!-- |    -src: (按照以下顺序列举每个代码)                                   |-->
+    <!-- |       --asset/       各种静态资源                                   | -->
+    <!-- |       --api/         各种服务器接口                                 |-->
+    <!-- |       --components/  各种.vue组件 功能组件=>页面组件 的顺序            |-->
+    <!-- |       --App.vue                                                   |-->
+    <!-- |       --main.js                                                   |-->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- Vue全家桶 -->
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-router.js"></script>
+    <script src="./lib/vue-resource.js"></script>
+    <!-- Element框架 -->
+    <link href="./lib/element/theme-default/index.css" rel="stylesheet">
+    <script src="./lib/element/index.js"></script>
+    <!-- 字体修改 -->
+    <style type="text/css">
+    body,
+    button,
+    input,
+    select,
+    textarea,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+    }
+
+    .time {
+        font-size: 13px;
+        color: #999
+    }
+
+    .bottom {
+        margin-top: 13px;
+        line-height: 12px
+    }
+
+    .button {
+        padding: 0;
+        float: right
+    }
+
+    .image {
+        width: 100%;
+        display: block
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: ""
+    }
+
+    .clearfix:after {
+        clear: both
+    }
+    </style>
+</head>
+
+<body>
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |                                                                  |-->
+    <!-- |               新优秀作品组件 components/index.vue                   |-->
+    <!-- |                                                                  |-->
+    <!-- ------------------------------------------------------------------- -->
+    <template id="pageindex">
+        <div>
+            <!-- 遍历作品集  -->
+            <el-row v-loading="loading" element-loading-text="拼命加载中">
+                <div>
+                    <br>
+                    <!-- 搜索框  -->
+                    <el-row>
+                        <el-col>
+                            <el-autocomplete class="inline-input" v-model="key" :fetch-suggestions="querySearch" placeholder="请输入作品名关键词">
+                                <template slot="prepend">搜索题目</template>
+                                <el-button slot="append" icon="search"></el-button>
+                            </el-autocomplete>
+                        </el-col>
+                    </el-row>
+                    <br>
+                    <el-table :data="pageresult" 
+
+                    stripe
+                    max-height=" " style="width: 100%" border ref="multipleTable" :default-sort="{prop: 'time', order: 'descending'}">
+                        <el-table-column align="left" sortable label="编号" prop="name" width="90vw" fixed>
+                            <template scope="scope">
+                                <span><b>{{  scope.row["id"] }}</b></span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="题目" prop="name" width="110vw">
+                            <template scope="scope">
+                                <span><b>{{  scope.row["标题"].replace( scope.row["id"]+".","").replace(" (Standard IO)","") }}</b></span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="题目描述" prop="name" width="400vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["题目描述"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="输入" prop="name" width="250vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["输入"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="输出" prop="name" width="250vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["输出"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="样例输入" prop="name" width="100vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["样例输入"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="样例输出" prop="name" width="100vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["样例输出"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="数据范围" prop="name" width="100vw">
+                            <template scope="scope">
+                                <span>{{  scope.row["数据范围限制"] }}</span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column align="left" sortable label="参考答案" prop="name" width="180vw">
+                            <template scope="scope">
+                                <el-collapse>
+                                    <el-collapse-item title="点击查看答案" name="1">
+                                        <template v-for="(key,value) in scope.row['参考答案']">
+                                            <el-tag type="warning" closable><a target="_black" :href="'./'+scope.row['id']+'/'+value">{{ value }}</a></el-tag><br>
+                                        </template>
+                                    </el-collapse-item>
+                                </el-collapse>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                    <br>
+                    <!-- 底部页尾  -->
+                    <el-row type="flex" class="row-bg" justify="center">
+                        <el-pagination small :page-size="pagesize" layout="prev, pager, next" :total="restaurants.length" @current-change="handleCurrentChange">
+                        </el-pagination>
+                    </el-row>
+                </div>
+    </template>
+    <script type="text/javascript" src="./lib/pinyin_dict_notone.js"></script>
+    <script type="text/javascript" src="./lib/pinyinUtil.js"></script>
+    <script type="text/javascript">
+    var pageindex = Vue.extend({
+        template: '#pageindex',
+        data: function() {
+            return {
+                loading: false,
+                key: "",
+                restaurants: [],
+                pagesize: 16,
+                pagenum: 1,
+                extsize: 0,
+            }
+        },
+        methods: {
+            calc_url(_url) {
+                return './#' + encodeURIComponent(btoa(_url));
+            },
+            open_editor() {
+                //alert("功能还在测试中，敬请期待");
+            },
+            handleCurrentChange(val) {
+                console.log("当前页: ${val}");
+                this.pagenum = val;
+                this.extsize = 0;
+            },
+            get_result() {
+                this.$emit('setloading', true);
+                this.$http.get("./main.json")
+                    .then((response) => {
+
+                        function shuffle(a) {
+                            var b = [];
+                            while (a.length > 0) {
+                                var index = parseInt(Math.random() * (a.length - 1));
+                                b.push(a[index]);
+                                a.splice(index, 1);
+                            }
+                            return b;
+                        }
+
+                        //this.restaurants = shuffle(response.data);
+                        this.restaurants = response.data //.sort()//.reverse();
+                        this.$emit('setloading', false);
+                    }).catch(function(response) {
+                        console.log(response);
+                        this.key = response.value;
+                    })
+                return;
+            },
+            querySearch(queryString, cb) {
+                var restaurants = this.restaurants;
+                var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
+                // 调用 callback 返回建议列表的数据
+                cb(results);
+            },
+            createFilter(queryString) {
+                return (restaurant) => {
+                    return (pinyinUtil.getPinyin(restaurant.value).toLowerCase()
+                        .indexOf(pinyinUtil.getPinyin(queryString.toLowerCase())) >= 0);
+                };
+            },
+            handleScroll() {
+                //console.log( window.scrollY + document.documentElement.clientHeight);
+                //console.log( document.documentElement.scrollHeight );
+                if ((window.scrollY + document.documentElement.clientHeight + 0.5) >=
+                    (document.documentElement.scrollHeight) && this.loading == false) {
+
+                    this.loading = true;
+                    //懒加载
+                    this.$message({
+                        message: '正在加载更多结果，请稍后',
+                        type: 'info',
+                        duration: 200
+                    });
+                    //加载文件
+                    setTimeout(() => {
+                        this.extsize += this.pagesize;
+                        this.loading = false
+                    }, 200);
+
+                }
+            }
+        },
+        computed: {
+            "pageresult": function() {
+                return this.restaurants.slice(this.pagesize * this.pagenum - this.pagesize, this.pagesize * this.pagenum + this.extsize);
+            }
+        },
+        mounted() {
+            console.log("开始");
+            this.get_result();
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed() {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
+    })
+    </script>
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |                                                                  |-->
+    <!-- |               入口组件文件 App.vue                                 |-->
+    <!-- |                                                                  |-->
+    <!-- ------------------------------------------------------------------- -->
+    <div id="app" style="padding:5px;">
+        <!-- 顶部导航  -->
+        <el-menu theme="blue" class="el-menu-demo" mode="horizontal">
+            <router-link to="/index">
+                <el-menu-item index="0">
+                    NOIP题库
+                </el-menu-item>
+            </router-link>
+        </el-menu>
+        <!-- 中间部分  -->
+        <div v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中">
+            <!-- 路由出口 -->
+            <!-- 路由匹配到的组件将渲染在这里 -->
+            <router-view></router-view>
+        </div>
+        <br/>
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |                                                                  |-->
+    <!-- |               入口脚本文件 main.js                                 |-->
+    <!-- |                                                                  |-->
+    <!-- ------------------------------------------------------------------- -->
+    <script type="text/javascript">
+    var router = new VueRouter({
+        //mode: 'history',
+        routes: [
+            { path: '/', redirect: '/index' },
+            { path: '/index', name: "新优秀作品", component: pageindex }
+        ]
+    });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            fullscreenLoading: false,
+        },
+        router: router,
+        created: function() {
+
+        }
+    });
+
+    //设置加载中状态
+    vm.$on('setloading', function(status) {
+        vm.fullscreenLoading = status;
+    });
+    </script>
+    <!-- ------------------------------------------------------------------- -->
+    <!-- |                                                                  |-->
+    <!-- |               项目配置文件 webpack.config.js                       |-->
+    <!-- |                                                                  |-->
+    <!-- ------------------------------------------------------------------- -->
+</body>
+
+</html>

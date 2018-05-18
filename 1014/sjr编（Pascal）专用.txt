@@ -1,0 +1,11 @@
+var n:longint;
+begin
+read(n);
+if (n=1) then write('Monday');
+if (n=2) then write('Tuesday');
+if (n=3) then write('Wednesday');
+if (n=4) then write('Thursday');
+if (n=5) then write('Friday');
+if (n=6) then write('Saturday');
+if (n=7) then write('Sunday');
+end.

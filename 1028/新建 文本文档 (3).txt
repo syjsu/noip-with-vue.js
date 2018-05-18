@@ -1,0 +1,183 @@
+
+#include <iomanip>
+#include <iostream>
+#include <iomanip>
+#include  <math.h>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+    int a,b;
+    cin>>a>>b;
+    int c=0;
+    for(int i=1;i<=sqrt(a);i++){
+		if(a%i==0&&b%i==0){
+			c=c+1;
+		}
+    }if(c==1){
+		cout<<"Yes";
+    }else if(c>1){
+		cout<<"No";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+	
+	
+	
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+	
+}   

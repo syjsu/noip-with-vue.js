@@ -1,0 +1,12 @@
+var
+l:real;
+begin
+read(l);
+if (l=0.5) then write('3')
+else 
+begin 
+l:=l-0.5; 
+l:=l/0.2; 
+write(l+3:0:0); 
+end;
+end.

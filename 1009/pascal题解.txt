@@ -1,0 +1,8 @@
+program ex;
+var a,b:longint;
+begin
+ read(a,b);
+ if (a+b)<10 then write('water')
+ else if ((a+b)>=10) and (a>b) then write('tree')
+ else if ((a+b)>=10) and (a<=b) then write('tea');
+end.

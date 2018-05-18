@@ -1,0 +1,33 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int n;int i=1;int j;
+    cin>>n;
+    for(i;i<=n;i++)/*i=3 */
+    {
+    for(int m=n-i;m>0;m--)
+        {cout<<" ";}
+       for(j=1;j<=i*2-1;j++)//j=5
+       { 
+        
+        cout<<j;
+         }
+         cout<<endl;
+         }
+    for(int l=n-1;l>=0;l--)//l=2 l=1
+      {
+      for(int m=n-l;m>0;m--)
+       {cout<<" ";}
+      for(int k=1;k<=l*2-1;k++)
+       { 
+        cout<<k;
+         }
+         cout<<endl;
+         }
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

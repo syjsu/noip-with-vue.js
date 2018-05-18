@@ -1,0 +1,11 @@
+var n,i,l:longint;
+o:string;
+begin
+read(n);
+i:=n mod 123;
+l:=n mod 91;
+if (i>=97) and (i<=122) then o:=chr(i)
+else if (l>=65) and (l<=90) then o:=chr(l)
+else o:='*';
+write(o);
+end.

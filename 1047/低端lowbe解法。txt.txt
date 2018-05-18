@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a[5][5];
+	/*---------input----------*/
+	for(int i=0;i<5;i++)
+	for(int j=0;j<5;j++)
+	cin>>a[i][j];
+	/*------find the max------*/
+	int x[8];int k=0,maxn;
+	for(int i=0;i<5;i++)
+	{
+		maxn=-9999999; 
+		for(int j=0;j<5;j++)
+		{
+			if(a[i][j]>maxn)
+			{
+				maxn=a[i][j];
+				x[k]=j; 
+			}
+		} 
+		k++;
+	} 
+	/*------find the min------*/
+	int minn,o=0;int y[8];
+	for(k=0;k<5;k++)
+	{
+		minn=9999999;
+		for(int i=0;i<5;i++)
+		{
+			if(a[i][x[k]]<minn)
+			{
+				minn=a[i][x[k]];
+				y[o]=i;
+			}
+		}
+		if(y[o]==k)
+		{
+			cout<<k+1<<" "<<x[k]+1<<" "<<a[k][x[k]];
+			return 0; 
+		}
+		o++;
+	}
+	cout<<"not found";
+
+        //我最喜欢你了，告诉ZXX，我爱她!!!
+
+	return 0;
+}

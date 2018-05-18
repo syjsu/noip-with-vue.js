@@ -1,0 +1,50 @@
+var n,m,i,o,k,s:longint;
+    a:array[1..10000]of longint;
+    b:array[1..10000]of longint;
+begin 
+read(n,m);
+for i:=1 to n do
+begin
+read(b[i],a[i]);
+end;
+for i:=1 to n do
+begin
+for o:=1 to n-i do
+begin
+if a[o]<a[o+1] then
+ begin
+  k:=a[o];
+  a[o]:=a[o+1];
+  a[o+1]:=k;
+   k:=b[o];
+   b[o]:=b[o+1];
+   b[o+1]:=k;
+   end;
+   end;
+ end;
+k:=trunc(m*1.5);
+if k>n then k:=n;
+i:=0;
+repeat
+ i:=i+1;
+ s:=a[i]-a[k];
+ until s<0;
+k:=i-1;
+writeln(a[k],' ',k);
+for i:=1 to k do
+begin
+for o:=1 to k-i do
+begin
+if(a[o]=a[o+1])and(b[o]>b[o+1])then
+ begin
+   s:=b[o];
+   b[o]:=b[o+1];
+   b[o+1]:=s;
+ end;
+ end;
+ end;
+for i:=1 to k do
+begin
+writeln(b[i],' ',a[i]);
+end;
+end.

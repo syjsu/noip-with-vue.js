@@ -1,0 +1,23 @@
+var a,b,c:array[0..1000]of 0..1000;
+    n,m,i,j,k,t:-1000..1000;
+begin
+  readln(t);
+  for k:=1 to t do
+  begin
+  read(n);
+  for i:=1 to n do begin
+   a[i]:=i;
+   read(b[i]);
+  end;
+  j:=0; i:=0; m:=1;
+  while(n>=j)and(n>=m)do
+   if c[j]<>b[m] then begin
+    inc(j); inc(i);
+    c[j]:=a[i];
+   end else begin
+    inc(m); dec(j);
+  end;
+  if j=0 then writeln('Possible')
+   else writeln('Impossible');
+   end;
+end.

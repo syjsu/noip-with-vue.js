@@ -1,0 +1,488 @@
+int i,l;
+	char s[81]={ },a[81]={ };
+	cin.getline(s,81);
+	l=strlen(s)
+	for(i=0;i<l;i++)
+	{
+	    if(s[i]>='a'&&s[i]<'z'||s[i]>='A'&&s[i]<'Z');
+	        s[i]+=1;
+	    else
+	        if(s[i]=='z'||s[i]=='Z');
+	            s[i]=s[i]-25;
+	}
+	cout<<s<<endl;
+
+
+
+
+#include <iostream>
+
+
+
+
+
+
+
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	int i,l,b=0,t[10];
+	char s[100],a[100]={ };
+	cin.getline(s,100);
+	l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+		if(s[i]>='0'&&s[i]<=9);
+		{
+		    b++;
+		    t[s[i]-48]++
+	    }
+    }    
+    int max=t[0],x=0;
+    for(i=1;i<=9;i++)
+    if(max<t[i])
+    {
+    	max=t[i];
+    	x=i;
+	}
+    cout<<b<<endl;
+    cout<<x<<endl;
+    
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+int main(int argc, char** argv) {
+	int i,l;
+	char s[81];
+	cin.getline(s,81);
+	l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+		if(s[i]>='a'&&s[i]<='z')
+		    s[i]=s[i]-32;
+		else
+		    if(s[i]>='A'&&s[i]<='Z')
+		        s[i]=s[i]+32;
+		cout<<s[i];
+	}
+	return 0;
+}
+
+
+
+
+
+if(max<strlen(s[j]))
+		{
+			max=strlen(s[j]);
+			maxa=j;
+		}
+#include <iostream>
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+int main(int argc, char** argv) {
+	
+	int i,l,l1,x;
+	char a[81],s[81];
+	cin.getline(a,81);
+	cin.getline(s,81);
+	l=strlen(a);
+	l1=strlen(s);
+    for(i=0;i<l;i++)
+	{
+		if(a[i]>='A'&&a[i]<='Z')
+		    a[i]=a[i]+32;
+    }
+    for(i=0;i<l;i++)
+	{
+		if(s[i]>='A'&&s[i]<='Z')
+		    s[i]=s[i]+32;
+    } 
+    if(strcmp(s,s1)>0) 
+        cout<<">";
+    if(strcmp(s,s1)==0) 
+        cout<<"=";
+    if(strcmp(s,s1)<0) 
+        cout<<"<";
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+int main(int argc, char** argv) {
+	int i,j,n;
+	char s[21];
+	cin>>n;
+	for(int j=1;j<=n;j++)
+	{
+		cin>>s;
+		if(s[0]>='a'&&s[0]<='z')
+		    s[0]-=32;
+		for(int i=1;i<strlen(s);i++)
+		    if(s[1]>='A'&&s[1]<='Z')
+		        s[i]+=32;
+		cout<<s;
+	}
+	return 0;
+}
+
+
+A=65
+a=97
+0=48
+
+
+
+
+#include <iostream>
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+
+int main(int argc, char** argv) {
+	int i,l,a,b;
+	char s[101];
+	cin.getline(s,101);
+	l=strlen(s);
+	for(i=0;i<l;i++) 
+	{
+		if(s[i]>'A'&&s[i]<'Z')
+		    a++;
+		if(s[i]>'a'&&s[i]<'z')
+		    b++;
+	} 
+	if(a>b)
+	    cout<<"A"<<endl;
+	else
+	    cout<<"b"<<endl;
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+#include <cstring> 
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+int main(int argc, char** argv) {
+	int i,l,a=0,b=0,a2=0,b2=0;
+	char s[201];
+	cin>>s;
+	l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+		if(s[i]=='x')
+		    a++;
+		else
+		    b++;
+		if(a==11)
+		{
+		    a2++;
+		    a=0;
+		    b=0;
+	    }
+		if(b==11)
+		{
+		    b2++;
+		    a=0;
+		    b=0;
+	    }
+    }
+    if(a==0&&b==0)
+	        cout<<a2<<":"<<b2<<endl;
+	    else
+	        cout<<a2<<":"<<b2<<endl;
+	        cout<<a<<":"<<b<<endl;
+	return 0;
+}
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <cstring> 
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+int main(int argc, char** argv) {
+	int n,i,s=0,j;
+	cin>>n;
+	for(i=2;i<=n;i++)
+	{
+		for(j=2;j<i;j++)
+		{
+	        if(i%j==0) 
+	            s++;
+    	}
+    	if(s==0)
+	    {
+	        cout<<i<<" ";
+	    }
+	    s=0;
+    }
+    
+	return 0;
+
+
+
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std
+
+int main(int argc, char** argv) {
+	int n,i,x=1,a=0,sum=0;
+	cin>>n;
+	for(i=n;i<=1;i--)
+	    x=x*i;
+    a=s%10;
+    while(s%10==0)
+    {
+    	sum++;
+    	s=s/10;
+	}
+	cout<<sum
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+bool     isprime(int a)
+{
+	for(int i=2;i<a/2;i++)
+	{
+		if(a%i==0)
+		    return  false;
+		return true;
+	}
+}
+int main(int argc, char** argv) {
+	int n,t,a,i;
+	cin>>n;
+	for(i=n;i>2;i--)
+	{
+	    if(isprime(i)==true&&isprime(i-2)==true)
+	        break;	
+	}
+	cout<<i<<" "<<i-2<<endl;
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+#include <cstring>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main(int argc, char** argv) {
+	int l,i;
+	char ch,a[101];
+	cin.getline(a,101);
+	cin>>ch;
+	l=strlen(a);
+	for(i=0;i<l;i++)
+	{
+	    if(a[i]==ch)
+	        a[i]-=32; 	    	
+	}
+	cout<<a<<endl;
+	return 0;
+}
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+
+int main() {
+	int k,i=2; 
+	cin>>k;
+    double s=1.0;
+	while(s<=k)	 
+	{
+		s+=1.0/i;
+		i++;
+	}
+	cout<<i-1<<endl;
+	return 0;
+}
+
+
+
+
+#include <iostream>
+#include<cmath>
+#define maxn 5000010
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+int n,s[maxn];
+int main(int argc, char** argv) {
+	long long ans=0,k,i,j;
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		cin>>k;
+		if(s[k]==0)
+		{
+		    ans=0;
+		    for(j=1;j<=int(sqrt(k))j++)
+		    if(k%j==0) 
+		    	ans+=j+k/j;
+		    if(sqrt(k)==int(sqrt(k)))
+		        ans-=int(sqrt(k));
+		    s[k]=ans;
+	    }
+	    cout<<s[k]<<endl;
+	}
+	return 0;
+}
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+int dg(int n)
+{
+	if(n==1)
+	    return 1;
+	else
+	    return n*dg(n-1);
+}
+int main(int argc, char** argv) {
+	int n;
+	cin>>n;cout<<dg(n);
+	return 0;
+}
+
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+void q(int left,int right)
+{
+    int i,j;
+    int l=left,r=right;
+    int k;
+    k=a[left];
+    while(left<right)
+    {
+	    while(left<right&&k<=a[right])
+	        right--;
+	    swap(a[left],a[right]);
+	    while(left<right&&a[left]<=k)
+	        left++;
+	    swap(a[left],a[right]);
+    }
+    if(l<left-1)
+        q(l,left-1);
+    if(left+1<r)
+        q(left+1,r);
+    return;
+int main(int argc, char** argv) {
+	int n,i;
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		cin>>a[i];
+	}
+	q(i,n);
+	for(i=1;i<=n;i++) cout<<a[i]<<" ";
+	return 0;
+}
+
+
+
+
+{q.size() 
+ q.front()
+ q.back()
+ q.empty()
+ q.pop()
+ q.push()
+}
+
+
+
+
+
+
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+using namespace std;
+ 
+int main(int argc, char** argv) {
+    int n,i,x=0,a,b;
+	cin>>n;
+	a=1;
+	b=2;
+	if(n==1)	
+	    cout<<1<<endl;
+	if(n==2)
+	    cout<<2<<endl;
+	if(n>=3)
+	{
+		for(i=3;i<=n;i++)
+		{
+		    x=a+b;
+			a=b;
+			b=x;    	
+		}
+		cout<<x<<endl;
+    }
+	return 0;
+}

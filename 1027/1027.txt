@@ -1,0 +1,10 @@
+var n,k:longint;
+begin
+read(n);
+k:=0;
+repeat
+k:=k+n mod 10;
+n:=n div 10;
+until n=0;
+write(k);
+end.

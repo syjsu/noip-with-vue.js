@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int n, m, a, i;
+	
+	cin >> n >> m >> a;
+
+	if (n >= 1 && n <= 1000000000 && m >= 1 && m <= 1000000000 && a >= 1 && a <= 1000000000)
+	{
+		i = (n / a) * (m / a);
+
+                //若长、宽空隙之和大于用于填充的正方形边长的1.414倍，则可以斜着卡进一个
+		if(n % a + m % a >= sqrt(2) * a)i++;
+
+		cout << i << endl;
+	}
+
+	else cout << "n, m, a  must in  [1, 1000000000]" << endl;
+
+	system("pause");
+    return 0;
+}

@@ -1,0 +1,14 @@
+var a:integer;
+begin
+ readln(a);
+ if (a>0) and (a<8) then
+ begin
+ if a=1 then write('Monday');
+  if  a=2 then write('Tuesday');
+   if  a=3 then write('Wednesday');
+     if a=4 then write('Thursday');
+      if a=5 then write('Friday');
+       if a=6 then write('Saturday') ;
+        if a=7 then write('Sunday');
+        end;
+        end.

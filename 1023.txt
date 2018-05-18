@@ -1,0 +1,31 @@
+{
+  "输入": "输入一共两行，第1行为序列的个数n（1≤n≤1000)，第2行为序列的n个不超过1000的非负整数，整数之间以一个空格分隔。",
+  "题目描述": "给定一个长度为n的非负整数序列，请计算序列的最大跨度值（最大跨度值 = 最大值减去最小值）。",
+  "参考答案": {
+    "pascal题解（别uses math）.txt": "By lzc林某",
+    "1023.cpp": "By michaelwrl",
+    "jack最大跨度.cpp": "By jack_魏",
+    "杜芮莹给你的pascal解答.txt": "By 3204653771",
+    "1023最大跨度.cpp": "By tszx2016",
+    "a1_5.pas": "By xc200599",
+    "作者注：题解里的Pascal Answer是另一题的解答，此为正解，敬请谅解！.pas": "By cheng08032005",
+    "最大跨越度.cpp": "By wangshengjun33",
+    "不用排序.cpp": "By Endless_Errors",
+    "c++标准答案.cpp": "By 熟悉的背景",
+    "最大跨度.cpp": "By wuyiheng",
+    "秀才  最大跨度.cpp": "By 秀才",
+    "试题24.cpp": "By 黄星皓",
+    "Billy.pas": "By sxlch",
+    "sjr编（Pascal）专用(这题才正确）.txt": "By 1059420075",
+    "sjr编（Pascal）专用.txt": "By 2055186079",
+    "冒泡排序1023.cpp": "By 1206614133",
+    "Pascal Answer.pas": "By cheng08032005",
+    "pascal题解（ac）.txt": "By 403584200@qq.com",
+    "c1023.pas": "By CXJ"
+  },
+  "样例输入": "6\n3 0 8 7 5 9",
+  "数据范围限制": "1≤n≤1000",
+  "标题": "1023. 最大跨度 (Standard IO)",
+  "输出": "输出最大跨度值。",
+  "样例输出": "9"
+}

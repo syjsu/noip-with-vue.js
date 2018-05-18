@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	int score;
+	scanf("%d",&score);
+	if (score>=90)
+	{printf("Excellent");
+	} 
+	else if(score>=80)
+	{printf("Good");
+	}
+	else if(score>=60)
+	{
+		printf("Pass");
+	}
+	else if (score<60)
+	{printf("Fail");
+	}
+}

@@ -1,0 +1,105 @@
+#include <iomanip>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int z;
+	cin>>z;
+	int a=z/1000000000;
+	int b=z/100000000%10;
+	int c=z/10000000%10;
+	int d=z/1000000%10;
+	int e=z/100000%10;
+	int f=z/10000%10;
+	int g=z/1000%10;
+	int h=z/100%10;
+	int i=z/10%10;
+	int j=z%10;
+cout<<a+b+c+d+e+f+g+h+i+j;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+	
+}   

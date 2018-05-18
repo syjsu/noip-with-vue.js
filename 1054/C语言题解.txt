@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int n, m;
+char b[101][101],w[101][101];
+int main(void)
+{
+	scanf("%d%d", &n,&m);
+	for (int i = 1; i <= n; i++)
+	{
+			scanf("%s", &b[i][1]);	
+	}
+	int xd[] = { 1,0,1,-1,1,-1,0,-1 };
+	int yd[] = { 0,1,1,-1,-1,1,-1,0 };
+	for (int e = 1; e <= n; e++)
+	{
+	 	for (int i = 1; i <= m; i++)
+		{
+			
+				int x, y;
+				if (b[e][i] == '*') {
+				for (int f = 0; f < 8; f++)
+				{
+					x = e + xd[f];
+					y = i + yd[f];
+					if (x >= 1 && x <= n&&y >= 1 && y <= m&&b[x][y] == '?')
+					{
+						w[x][y]++;
+					}
+				}
+				}
+			}	
+ 		}
+    for (int e = 1; e <= n; e++)
+{
+	for (int i = 1; i <= m; i++)
+	{
+		if (b[e][i] == '*')
+		{
+			printf("*");
+		}
+		if (b[e][i] == '?')
+		{
+			printf("%d", w[e][i]);
+		}
+	}
+	printf("\n");
+}
+ 	return 0;
+}

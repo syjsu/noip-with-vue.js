@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+	char b[200][200];
+	int s[200];
+	int j,n=0,m=0,k=0;
+	bool mend=0;
+	while(1){
+		cin>>b[n];
+		for(j=0;j<200;j++){
+			if(b[n][j]=='.'){
+				 mend=1;
+				 b[n][j]='\0';
+				 s[n]=j;
+				 break;
+			}
+			if(b[n][j]=='\0'){
+				s[n]=j;
+				break;
+			}
+		}
+		
+		if(mend) break;
+		n++;
+	}
+	k=s[0];
+	for(j=1;j<n;j++){
+		if(s[j]<k){
+			k=s[j];
+			m=j;
+		}
+	}
+	cout<<b[m]<<endl;
+	
+	return 0;
+}

@@ -1,0 +1,43 @@
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#include <ctime>
+#include <iostream>
+#include <algorithm>
+
+using namespace std ;
+
+int A,B,k[1005],ans=300,n;
+
+bool vis[1005];
+
+void DFS(int t,int now)
+{
+	if (now==B)
+	{
+		ans=min(ans,t);
+		return;
+	}
+	if (now<1||now>n||vis[now])
+		return;
+	
+	vis[now]=true;
+	DFS(t+1,now+k[now]);
+	DFS(t+1,now-k[now]);
+	vis[now]=false;
+	return;
+}
+
+int main()
+{
+	memset(vis,false,sizeof(vis));
+	scanf("%d%d%d",&n,&A,&B);
+	for (int i=1;i<=n;i++)
+		scanf("%d",&k[i]);
+	DFS(0,A);
+	if (ans==300)
+		ans=-1;
+	printf("%d",ans);
+	return 0;
+}

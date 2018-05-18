@@ -1,0 +1,65 @@
+简单模拟，要注意string类型的输入输出。
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+struct node
+{
+	string name;
+	int id;
+	string S;
+	int V;
+	int W;
+	int typ;
+	double pl;
+}car[105];
+
+int n,m;
+
+int main()
+{
+	int op,t1,sum;
+	string t2;
+	scanf("%d",&n);
+	for (int i=1;i<=n;i++)
+	{
+		cin>>car[i].S>>car[i].V>>car[i].W>>car[i].typ>>car[i].name;
+		car[i].id=i;
+		car[i].pl=double(car[i].V)/double(car[i].W);
+	}
+	
+	scanf("%d",&m);
+	for (int i=0;i<m;i++)
+	{
+		sum=0;
+		scanf("%d",&op);
+		if (op==1)
+		{
+			scanf("%d",&t1);
+			cout<<car[t1].S<<endl;
+		}
+		if (op==2)
+		{
+			cin>>t2;
+			for (int j=1;j<=n;j++)
+			{
+				if (car[j].S==t2)
+				{
+					cout<<car[j].name<<endl;
+					break;
+				}
+			}
+		}
+		if (op==3)
+		{
+			scanf("%d",&t1);
+			for (int j=1;j<=n;j++)
+				if (car[j].pl>=t1)
+					sum++;
+			cout<<sum<<endl;
+		}
+	}
+	return 0;
+}

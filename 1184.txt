@@ -1,0 +1,20 @@
+{
+  "输入": "第一行输入n(1<=n<=10)。",
+  "题目描述": "有2n个人排成一行进入剧场。入场费5元。其中只有n个人有一张5元钞票，另外n人只有10元钞票，剧院一开始无其它钞票，问有多少种排队方法使得只要有10元的人买票，售票处就有5元的钞票找零？",
+  "标题": "1184. 排队买票 (Standard IO)",
+  "参考答案": {
+    "SoftMgr.exe": "By zhouyichen",
+    "Re-从零开始的异世界生活(cpp1072 六角填数).cpp": "By DKACVenus",
+    "1184打表（搜索卡塔兰数）.cpp": "By zzzzzzzz",
+    "1.cpp": "By Mr.William",
+    "hahaha.cpp": "By zcy2017",
+    "SRC.c": "By i_fuck_your_mother",
+    "正确题解.cpp": "By 楼谨鸣",
+    "polynomial.cpp": "By abc12354a",
+    "fp.exe": "By zhouyichen"
+  },
+  "样例输入": "2",
+  "数据范围限制": "1<=n<=10",
+  "输出": "输出一个数表示排列的方法总数。",
+  "样例输出": "8"
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+int a[100005];
+int f(int l,int r,int x){
+	int m;
+	a[0]=-1;
+	m=(l+r)/2;
+	if(l>r) return a[r];
+	if(a[m]==x) return a[m];
+	if(a[m]>x&&a[m-1]<=x) return a[m-1];
+	if(a[m]>x&&a[m-1]>x) return f(l,m-1,x);
+	if(a[m]<=x&&a[m+1]>x) return a[m];
+	if(a[m]<x&&a[m+1]<=x) return f(m+1,r,x);
+		
+}
+int main(){
+	int l,r,x;
+	int n,m;
+	int t;
+	while(scanf("%d %d",&n,&m)!=EOF){
+		l=1;
+		r=n;
+		for(int i=1;i<=n;i++) scanf("%d",&a[i]);	
+		for(int i=1;i<=m;i++){
+			scanf("%d",&x);
+			t=f(1,r,x);
+			printf("%d\n",t);
+		}
+	}
+}

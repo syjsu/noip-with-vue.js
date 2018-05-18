@@ -1,0 +1,30 @@
+{
+  "输入": "输入x。",
+  "题目描述": "编写程序，计算下列分段函数y=f(x)的值（输入数据为浮点数，输出保留小数点后三位）。\n",
+  "参考答案": {
+    "秀才  分段函数.cpp": "By 秀才",
+    "jack分段函数.cpp": "By jack_魏",
+    "1019(c++).docx": "By bc_张锦喆",
+    "1019.txt": "By 淡灬看夏丶恋雨",
+    "pascal题解（ac）.txt": "By 403584200@qq.com",
+    "分段函数 by Philosopher.txt": "By Philosopher",
+    "分段函数case语句.txt": "By 54360921",
+    "Untitled891.cpp": "By hdl",
+    "未命名7.cpp": "By 吕泓磊",
+    "新建文本文档.txt": "By 贾剑阳",
+    "1019最小.cpp": "By 陈奕明",
+    "Barry.txt": "By Barry Shih",
+    "Billy.pas": "By sxlch",
+    "By Shay.cpp": "By Fox_25",
+    "P1019分段函数 By黑鹰.cpp": "By 黑鹰",
+    "分段函数.cpp": "By ququsky",
+    "shidaichaoren.txt": "By shidaichaoren",
+    "1019.cpp": "By 1206614133",
+    "sjr编（Pascal）专用.txt": "By 1059420075"
+  },
+  "样例输入": "1",
+  "数据范围限制": "0<=x<20",
+  "标题": "1019. 分段函数 (Standard IO)",
+  "输出": "输出f(x)的值，答案保留三位小数。",
+  "样例输出": "3.500"
+}

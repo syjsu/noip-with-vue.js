@@ -1,0 +1,39 @@
+﻿#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    short n,c=1;
+    cin>>n;
+    short a[105][105];
+    memset(a,0,sizeof(a));
+    short b[4][2]={1,0,-1,1,0,1,1,-1};
+    short i=1,j=1;a[i][j]=c;
+    while(c<n*n)
+    {
+        i+=b[0][0];j+=b[0][1];
+        if(i<=n&&j<=n)a[i][j]=++c;
+        while(i>=1&&j>=1)
+        {
+            i+=b[1][0];j+=b[1][1];
+            if(i<=n&&j<=n)a[i][j]=++c;
+            if(i==1||j==1)break;
+        }
+        i+=b[2][0];j+=b[2][1];
+        if(i<=n&&j<=n)a[i][j]=++c;
+        while(i>=1&&j>=1)
+        {
+            i+=b[3][0];j+=b[3][1];
+           if(i<=n&&j<=n)a[i][j]=++c;
+            if(i==1||j==1)break;
+        }
+    }
+    for(short k=1;k<=n;k++)
+    {
+        for(short g=1;g<=n;g++)
+        {
+            cout<<a[k][g]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,11 @@
+var
+        n:longint;
+begin
+        readln(n);
+        case n div 10 of
+                9,10:writeln('Excellent');
+                8:writeln('Good');
+                6,7:writeln('Pass');
+                else writeln('Fall');
+        end;
+end.

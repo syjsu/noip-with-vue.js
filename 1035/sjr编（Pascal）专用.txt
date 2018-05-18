@@ -1,0 +1,21 @@
+var n:longint;
+function ofo(m:longint):longint;
+var s:longint;
+begin
+if m div 10=0 then 
+begin
+ofo:=m;
+exit;
+end;
+s:=0;
+while m>0 do
+begin
+s:=s+m mod 10;
+m:=m div 10;
+end;
+ofo:=ofo(s);
+end;
+begin
+readln(n);
+write(ofo(n));
+end.

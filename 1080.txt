@@ -1,0 +1,21 @@
+{
+  "输入": "输入文件共有4行：每行为一串字符，不超过100个字符。 ",
+  "题目描述": "Johe最近玩起了字符游戏，规则是这样的：读入四行字符串，其中的字母都是大写的，Johe想打印一个柱状图显示每个大写字母的频率。你能帮助他吗？",
+  "标题": "1080. 统计字符 (Standard IO)",
+  "提示": "1.输出的相邻字符间有一个空格。\n2.最后一行的26个大写字母每次必须输出。\n3.大写字母A所在的第一列前没有空格。",
+  "参考答案": {
+    "1080（20行）.cpp": "By Youth丨吹雪",
+    "HINT行与行之间没有空行.txt": "By Meanda",
+    "统计字符.cpp": "By zhanggaoxiang",
+    "oj1080行与行之间没有空隙.pas": "By Yangsixiang",
+    "1080.统计字符.cpp": "By 12345abcde",
+    "tongjizifu.cpp": "By xudongyang",
+    "ex2.cpp": "By andyc_03",
+    "传奇英雄.txt": "By 传奇英雄",
+    "p1080.cpp": "By outlooker"
+  },
+  "样例输入": "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.\nTHIS IS AN EXAMPLE TO TEST FOR YOUR\nHISTOGRAM PROGRAM.\nHELLO!",
+  "数据范围限制": "",
+  "输出": "与样例的格式保持严格一致。",
+  "样例输出": "                            *                       \n                            *                       \n        *                   *                       \n        *                   *     *   *             \n        *                   *     *   *             \n*       *     *             *     *   *             \n*       *     * *     * *   *     * * *             \n*       *   * * *     * *   * *   * * * *           \n*     * * * * * *     * * * * *   * * * *     * *   \n* * * * * * * * * * * * * * * * * * * * * * * * * * \nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+}

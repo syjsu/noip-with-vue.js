@@ -1,0 +1,24 @@
+{
+  "样例输入": "We are Oiers.",
+  "样例输出": "We",
+  "题目描述": "输入一段由若干个以空格分隔的单词组成的英文文章，求出文章中最短的单词(文章以英文句点“.”结束，且字符总数不超过200）。",
+  "参考答案": {
+    "1058.cpp": "By 刘蕴之",
+    "这绝对有毒.cpp": "By wuyiheng",
+    "sjr58.pas": "By 1059420075",
+    "ssj.pas": "By shenshijun0110",
+    "t1058.pas": "By Rh626",
+    "main.cpp": "By jiong9",
+    "未命名1.cpp": "By puol",
+    "1058(小学生).c": "By hjdmmm",
+    "word.cpp": "By eliot",
+    "test": "By zhengqiu",
+    "1058-4.cpp": "By huter",
+    "新建文本文档.txt": "By team1563",
+    "doris100%对，我保证，呵呵又是我，虽然略烦，但肯定会祝你AC~.cpp": "By chenxiaoxian"
+  },
+  "数据范围限制": "",
+  "输入": "输入文章。",
+  "输出": "输出最早的最短的单词。",
+  "标题": "1058. 统计单词 (Standard IO)"
+}

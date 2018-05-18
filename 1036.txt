@@ -1,0 +1,33 @@
+{
+  "输入": "输入正整数n。",
+  "题目描述": "模拟将任意给定的正整数n转换成对应的二进制数的过程：对于输入的任意正整数n，输出若干行“shang:* yu:*”的形式，表示其转换过程。",
+  "参考答案": {
+    "试题37.cpp": "By 黄星皓",
+    "无为三中朱克文进制转换.c": "By zhukewen123",
+    "秀才  进制转换.cpp": "By 秀才",
+    "c++标准答案.cpp": "By 熟悉的背景",
+    "未命名3.cpp": "By 王志城",
+    "t1036.pas": "By Rh626",
+    "未命名5.cpp": "By 千万杀而尘不染",
+    "noi1036.pas": "By _wff_",
+    "p1036.txt": "By 有蛮坑",
+    "进制转换（寒）.docx": "By 寒",
+    "递归.cpp": "By DavidTesla",
+    "1036. 进制转换 .cpp": "By 千万杀而不染",
+    "noi.cpp": "By 天马行空",
+    "ac..cpp": "By 耀武阳威.",
+    "进制转换.cpp": "By wuyiheng",
+    "新建文本文档.txt": "By DoctorBobo",
+    "1036_进制转换.cpp": "By zcsor",
+    "Untitled1.cpp": "By 谭伯睿",
+    "hhhhh.cpp": "By WZG灬神坑",
+    "未命名1.cpp": "By a1181787415",
+    "jack二进制转换.cpp": "By jack_魏",
+    "sjr编（Pascal）专用.txt": "By 1059420075"
+  },
+  "样例输入": "13",
+  "数据范围限制": "1<=n<=5000",
+  "标题": "1036. 进制转换 (Standard IO)",
+  "输出": "输出其转为二进制的过程(具体见样例)。",
+  "样例输出": "shang:6 yu:1\nshang:3 yu:0\nshang:1 yu:1\nshang:0 yu:1"
+}

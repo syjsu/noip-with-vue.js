@@ -1,0 +1,8 @@
+program ex;
+var a:longint;
+begin
+ read(a);
+ if (a mod 123>=97) and (a mod 123<=122) then write(chr(a mod 123))
+ else if (a mod 91>=65) and (a mod 91<=90) then write(chr(a mod 91))
+ else write('*');
+end.

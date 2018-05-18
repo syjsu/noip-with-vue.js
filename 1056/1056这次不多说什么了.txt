@@ -1,0 +1,28 @@
+var p,q,r:longint;
+    b:byte;
+function zh(a:longint;s:byte):longint;
+var i,k:longint;j:byte;
+begin i:=0;k:=1;
+ repeat
+  j:=a mod 10;
+  a:=a div 10;
+  i:=i+j*k;
+  k:=k*s;
+  if j>=s then begin a:=0;i:=0;end;
+ until a=0;
+ zh:=i;
+end;
+
+begin
+read(p,q,r);
+for b:=2 to 17 do
+ begin
+  if(zh(p,b)*zh(q,b)=zh(r,b))and(zh(r,b)<>0)then
+   begin
+    write(b);
+    break;
+   end;
+  if b=17 then write(0);
+ end;
+end.
+

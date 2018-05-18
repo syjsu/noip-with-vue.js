@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+	float price;
+	int num;
+
+	cout<<"[1] apples"<<endl;
+	cout<<"[2] pears"<<endl;
+	cout<<"[3] oranges"<<endl;
+	cout<<"[4] grapes"<<endl;
+	cout<<"[0] Exit"<<endl;
+	cin>>num;
+	switch (num)
+	{
+	case 1: price=3.0; printf("price=");printf("%.1f",price);break;
+	case 2: price=2.5; cout<<"price="<<price<<endl;break;
+	case 3: price=4.1; cout<<"price="<<price<<endl;break;
+	case 4: price=10.2;cout<<"price="<<price<<endl;break;
+	case 0: break;
+	default:price=0;cout<<"price="<<price<<endl;break;
+	}
+	return 0;
+}

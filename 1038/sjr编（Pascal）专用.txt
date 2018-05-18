@@ -1,0 +1,14 @@
+var n,m,k:longint;
+a:array[1..13] of longint;
+    begin
+for m:=1 to 25 do
+begin
+read(k);
+a[k]:=a[k]+1;
+end;
+for k:=1 to 13 do
+begin
+if a[k]=1 then
+end;
+write(k);
+end.

@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int a[105][105],i,j,n,m;
+int main()
+{
+    char c;
+    cin>>n>>m;
+    for(i=0;i<=n;i++)
+    {
+        for(j=0;j<=m;j++)
+        a[i][j]=1;
+    }    
+    for(i=1;i<=n;i++)
+    {
+        scanf("\n");
+        for(j=1;j<=m;j++)
+        {
+            cin>>c;
+            if(c=='*')
+            {
+                a[i][j]=10;
+                if(a[i-1][j-1]!=0) a[i-1][j-1]++;
+                if(a[i-1][j]!=0) a[i-1][j]++;
+                if(a[i-1][j+1]!=0) a[i-1][j+1]++;
+                if(a[i][j+1]!=0) a[i][j+1]++;
+                if(a[i+1][j+1]!=0) a[i+1][j+1]++;
+                if(a[i+1][j]!=0) a[i+1][j]++;
+                if(a[i+1][j-1]!=0) a[i+1][j-1]++;
+                if(a[i][j-1]!=0) a[i][j-1]++;
+            }
+        }
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=m;j++)
+        {
+            if(a[i][j]<10) cout<<a[i][j]-1;     
+            else cout<<"*";
+        }
+        cout<<endl;
+    }
+}

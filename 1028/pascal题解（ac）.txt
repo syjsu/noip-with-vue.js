@@ -1,0 +1,19 @@
+program ex;
+var m,n,f:longint;
+procedure gcd(x,y:longint);
+begin
+ if x mod y=0 then
+ begin
+  f:=y;
+  exit;
+ end;
+ gcd(y,x mod y);
+end;
+
+begin
+ read(m,n);
+ gcd(m,n);
+ if f=1 then write('Yes')
+ else write('No');
+end.
+

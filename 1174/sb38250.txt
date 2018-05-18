@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+int n;
+int ans=0;
+int a[15]={0};
+int b[15]={0};
+int ab(int a1,int b1)
+{
+	if(a1>b1) return a1-b1;
+	return b1-a1;
+}
+int maxn(int m)
+{
+	int maxx=0;
+	int bj;
+	for(int i=2;i<=n;i++)
+		if(b[i]==0)
+		{
+			int c=ab(m,i);
+			if(c>maxx)
+			{
+				maxx=c;
+				bj=i;
+			}
+			
+		}
+	b[bj]=1;
+//	cout<<m<<" "<<bj<<endl;
+	return bj;
+}
+
+int main()
+{
+	cin>>n;
+	if(n==2)
+	{
+		cout<<2;
+		return 0;
+	}
+	a[1]=1;b[1]=1;
+	int i=1;
+	while(1)
+	{
+		int nn=n-i+2;
+		nn%=n;
+		if(nn==0) nn+=n;
+		if(i>n/2) break;
+		a[1+i]=maxn(a[i]);
+		a[n+1-i]=maxn(a[nn]);
+		i++;
+	}
+	for(int i=1;i<n;i++)
+	{
+		ans+=(ab(a[i],a[i+1])*ab(a[i],a[i+1]));
+	}
+	ans+=ab(a[1],a[n])*ab(a[1],a[n]);
+	cout<<ans;
+	return 0;
+}

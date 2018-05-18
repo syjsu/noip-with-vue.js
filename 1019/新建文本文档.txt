@@ -1,0 +1,14 @@
+#include<stdio.h>
+double f(double x){
+	if(0<=x&&x<5) return x+2.5;
+	if(5<=x&&x<10) return 2-1.5*(x-3)*(x-3);
+	if(10<=x&&x<20) return x/2-1.5;
+}
+int main(){
+	double x;
+	while(scanf("%lf",&x)!=EOF){
+		double t=f(x);
+		printf("%.3lf\n",t);
+	}
+	
+}

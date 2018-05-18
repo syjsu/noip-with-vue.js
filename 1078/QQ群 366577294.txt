@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int ai[201],ji[201]={0},tot=1000;
+int n,a,b;
+void fs(int bein,int step)
+{
+	if(step>tot) return;
+	if(bein==b) {
+		if(step<tot) tot=step;
+		return;
+	}
+	else{
+		ji[bein]=1;
+		if(bein-ai[bein]>0&&ji[bein-ai[bein]]==0) 
+		  fs(bein-ai[bein],step+1);
+		if(bein+ai[bein]<=n&&ji[bein+ai[bein]]==0)
+		  fs(bein+ai[bein],step+1);
+		ji[bein]=0;
+	}
+}
+int main()
+{
+	cin>>n>>a>>b;
+	for(int i=1;i<=n;i++) cin>>ai[i];
+	fs(a,0);
+	if(tot==1000) cout<<"-1";
+	else cout<<tot;
+	return 0;
+}

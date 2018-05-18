@@ -1,0 +1,30 @@
+var x,y:char;
+begin
+read(x);
+if x='a'then write('z');
+if x='b'then write('y');
+if x='c'then write('x');
+if x='d'then write('w');
+if x='e'then write('v');
+if x='f'then write('u');
+if x='g'then write('t');
+if x='h'then write('s');
+if x='i'then write('r');
+if x='j'then write('q');
+if x='k'then write('p');
+if x='l'then write('o');
+if x='m'then write('n');
+if x='n'then write('m');
+if x='o'then write('l');
+if x='p'then write('k');
+if x='q'then write('j');
+if x='r'then write('i');
+if x='s'then write('h');
+if x='t'then write('g');
+if x='u'then write('f');
+if x='v'then write('e');
+if x='w'then write('d');
+if x='x'then write('c');
+if x='y'then write('b');
+if x='z'then write('a');
+end.

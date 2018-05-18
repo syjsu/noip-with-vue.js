@@ -1,0 +1,21 @@
+program  p1035;
+var n:longint;
+procedure pi(a:longint);
+var l:integer;
+begin
+l:=0;
+repeat
+ l:=l+a mod 10;
+ a:=a div 10;
+until a=0;
+if l>=10 then pi(l)
+else write(l);
+end;
+begin
+read(n);
+pi(n);
+end.
+
+
+
+

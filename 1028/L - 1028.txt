@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int n,m,r;
+	scanf("%d %d",&n,&m);
+	while(n)
+	{
+		r=m%n;
+		m=n;
+		n=r;
+	}
+	if(m==1) printf("Yes");
+	else printf("No");
+	return 0;
+}

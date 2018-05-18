@@ -1,0 +1,26 @@
+#include <cstdio>
+#include <cstring>
+
+int main()
+{
+	char str[400];
+	int i, j, n[26], max;
+	memset(n, 0, sizeof(n[0])*26);
+	for (i=0; i<4; i++)
+		gets(str+strlen(str));
+	for (i=0; i<strlen(str); i++)
+		if (str[i]>='A' && str[i]<='Z')		++n[str[i]-'A'];
+	for (i=0, max=0; i<26; i++)
+		if (n[i]>max)	max = n[i];
+	for (i=max; i>0; i--)
+	{
+		for (j=0; j<26; j++)
+		{
+			if (n[j]>=i)	printf("* ");
+			else			printf("  ");
+		}
+		printf("\n");
+	}
+	printf("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z");
+	return 0;
+}

@@ -1,0 +1,14 @@
+{
+  "输入": "仅一行，一个字符串。",
+  "题目描述": "现在有一个英语文段，这个文段中仅包含大小写字母以及“ ”“,”“.”“!”“?”“;”6个字符。由于一些错误，这个文段缺少格式，希望你进行恰当整理并帮忙划分出语段中的句子。\n规则如下：\n     1、对于“;”“,”不做任何操作。\n     2、“.”“!”“?”表示一句话的结束，每句话的结束处应进行换行。\n     3、每一句话的开始处应含有两个空格。\n     4、文段开头、句与句之间可能存在一些空格，请忽略。\n需要特别注意的是，每一行的符号总数不能超过50个，符号包括大小写字母、上述的6个字符以及每句话前的两个空格。超出部分应从新的一行的第一个字符开始写起。\n现给出一个英语文段，请写一个程序，完成如上操作，并统计出该英语文段中共包含多少个句子。",
+  "标题": "1086. 字符处理 (Standard IO)",
+  "参考答案": {
+    "VIP5专享至尊1086.cpp": "By Ezreal SS",
+    "devcpp.exe": "By 李瀚之",
+    "字符处理.cpp": "By Kubic2024"
+  },
+  "样例输入": "Time is like a river, the left bank is unable to forget the memories, right is worth grasp the youth, the middle of the fast flowing, is the sad young faint. There are many good things, buttruly belong to own but not much. See the courthouse blossom,honor or disgrace not Jing, hope heaven Yunjuanyunshu, has no intention to stay. In this round the world, all can learn to use a normal heart to treat all around, is also a kind of realm!",
+  "数据范围限制": " 1 <= 字符串的长度 <= 100000",
+  "输出": "第1行，一个整数n，为英语文段中句子的个数。\n余下行按题目要求输出。",
+  "样例输出": "4\n  Time is like a river, the left bank is unable to forget the memories, right is worth grasp the youth, the middle of the fast flowing, is the sad young faint.\n  There are many good things, buttruly belong to o\nwn but not much.\n  See the courthouse blossom,honor or disgrace not  Jing, hope heaven Yunjuanyunshu, has no intention to stay.\n  In this round the world, all can learn to use a normal heart to treat all around, is also a kind of realm!"
+}

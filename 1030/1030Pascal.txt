@@ -1,0 +1,13 @@
+var
+  n,sum:qword;
+begin
+  readln(n);
+  sum:=1;
+    while n<>1 do
+      begin
+	    inc(sum);
+		if n mod 2=0 then n:=n div 2
+		   else n:=n*3+1;
+	   end;
+  writeln(sum);
+end.

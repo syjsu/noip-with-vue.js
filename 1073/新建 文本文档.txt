@@ -1,0 +1,12 @@
+int f(int n,int k)
+{
+if((k==1)||(n==0))
+{
+return 0;
+}
+if (n<k)
+{
+return f(n,n);
+}
+return f(n,k-1)+f(n-k,k);
+}

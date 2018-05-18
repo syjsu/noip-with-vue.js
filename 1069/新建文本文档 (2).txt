@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int sum=0;
+int xjj(int x,int y)
+{
+    if(x==1) sum++;
+    while(y<=x)
+    {
+        if(x%y==0) 
+        xjj(x/y,y);
+        y++;
+    }
+    return 0;
+}
+int main()
+{
+    int n,a;
+    cin>>n;
+    while(n>0)
+    {
+        cin>>a;
+        int i=2;
+        while(i<=a/2)
+        {
+            if(a%i==0)
+            {
+                xjj(a/i,i);
+            }
+            i++;
+        }
+        cout<<++sum<<endl;
+        sum=0;
+        n--;
+    }
+}  

@@ -1,0 +1,16 @@
+﻿#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int a,b,c,x;
+	cin>>x;
+	a=x/100;
+	b=(x-a*100)/10;
+	c=x%10;
+	if (x==pow(a,3)+pow(b,3)+pow(c,3))
+	cout<<"YES"<<endl;
+	else cout<<"NO"<<endl;
+	return 0;
+}

@@ -1,0 +1,46 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int m,n,k,l,d;
+	cin>>m>>n>>k>>l>>d;
+	int a[m][n];
+	int han[m],len[n];
+	memset(han,0,sizeof(han));
+	memset(len,0,sizeof(len));
+	int x,y,p,q;
+	for(int i=0;i<d;i++){
+		cin>>x>>y>>p>>q;
+		if(x==p)  {
+			if(y>q) len[q]++;
+			else len[y]++;
+		}
+		else{
+			if(x>p) han[p]++;
+			else han[x]++;
+		}
+	}
+	int ps1[k],ps2[l];
+	for(int i=0;i<k;i++) {
+		int max=0;
+		for(int j=0;j<m;j++) if(han[max]<han[j]) max=j;
+		ps1[i]=max;
+		han[max]=0;
+	}
+	for(int i=0;i<l;i++) {
+		int max=0;
+		for(int j=0;j<n;j++) if(len[max]<len[j]) max=j;
+		ps2[i]=max;
+		len[max]=0;
+	}
+	sort(ps1+0,ps1+k);
+	sort(ps2+0,ps2+l);
+	for(int i=0;i<k;i++) cout<<ps1[i]<<" ";
+	cout<<endl;
+	for(int i=0;i<l;i++) cout<<ps2[i]<<" ";
+	 
+	return 0;
+}

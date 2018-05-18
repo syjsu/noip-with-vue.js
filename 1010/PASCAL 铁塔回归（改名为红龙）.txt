@@ -1,0 +1,11 @@
+var 
+  w:integer;
+begin
+ read(w);
+ if w<=10 then write((w*0.8+0.2):0:2)
+ else
+ if w<=20 then write(((w-10)*0.75+8.2):0:2)
+ else
+ if w<=30 then write(((w-20)*0.7+15.7):0:2);
+ if w>30 then write('Fail');
+end.

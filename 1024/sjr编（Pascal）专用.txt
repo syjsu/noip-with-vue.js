@@ -1,0 +1,10 @@
+var l,n,m:longint;
+begin
+read(n);
+m:=0;
+for l:=1 to trunc(sqrt(n)) do
+if n mod l=0 then 
+if l*l<>n then inc(m,2)
+else inc(m);
+write(m);
+end.

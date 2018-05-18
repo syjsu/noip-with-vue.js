@@ -1,0 +1,25 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main(){
+	int b1[101][101],b2[101][101],i,j,k,m,n,sum=0,total=0;
+	cin>>m>>n;
+	for(i=0;i<m;i++)
+		for(j=0;j<n;j++)
+		cin>>b1[i][j];
+	for(i=0;i<m;i++)
+		for(j=0;j<n;j++)
+		cin>>b2[i][j];
+	
+	for(i=0;i<m;i++)
+		for(j=0;j<n;j++){
+			total++;
+			if(b1[i][j]==b2[i][j]) sum++;
+	}
+	cout<<fixed<<setprecision(2)<<(double)sum/total*100<<endl;
+	
+	
+	return 0;
+}

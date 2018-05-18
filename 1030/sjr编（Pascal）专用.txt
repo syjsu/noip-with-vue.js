@@ -1,0 +1,12 @@
+var n,i:int64;
+begin
+readln(n);
+i:=1;
+while n<>1 do 
+begin
+if n mod 2=0  then n:=n div 2 
+               else n:=3*n+1;
+inc(i);
+end;
+writeln(i);
+end.

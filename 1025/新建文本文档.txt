@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+	int n,sun,a,b,c,j=0,t=0,y=0,i;
+	while(scanf("%d",&n)!=EOF){
+		for(i=1;i<=n;i++){
+			scanf("%d%d%d",&a,&b,&c);
+			j+=a;
+			t+=b;
+			y+=c;
+		}
+		sun=j+t+y;
+		printf("%d %d %d %d\n",j,t,y,sun);
+		
+	}
+}

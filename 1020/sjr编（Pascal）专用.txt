@@ -1,0 +1,12 @@
+var m,k,l:longint;
+var c,s,n:string;
+begin
+read(n);
+l:=length(n);
+writeln(l);
+for m:=1 to l do
+begin
+c:=copy(n,m,1);
+writeln(c);
+end;
+end.

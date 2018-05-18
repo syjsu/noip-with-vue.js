@@ -1,0 +1,11 @@
+var n:string;
+l:longint;
+begin
+read(n);
+for l:=1 to length(n) do
+if (n[l]>='a')and(n[l]<='z')then 
+n[l]:=chr((ord(n[l])-ord('a')+3)mod 26+ord('a'))
+else if (n[l]>='A')and(n[l]<='Z') then
+n[l]:=chr((ord(n[l])-ord('A')+3)mod 26+ord('A'));
+write(n);
+end.

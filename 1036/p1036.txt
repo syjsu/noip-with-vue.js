@@ -1,0 +1,12 @@
+program  p1036;
+var n,a:integer;
+begin
+read(n);
+repeat
+a:=n mod 2;
+n:=n div 2;
+write('shang:',n,' ','yu:',a);
+writeln;
+until n=0;
+end.
+

@@ -1,0 +1,33 @@
+{
+  "输入": "输入两个整数m和n，中间用空格隔开。",
+  "题目描述": "输入两个正整数m和n，判断m和n是否互质（即最大公约数为1），是则输出Yes，否则输出No。\n ",
+  "参考答案": {
+    "huzhi.cpp": "By 郭子敬",
+    "1028、.txt": "By chendas",
+    "jack互质.cpp": "By jack_魏",
+    "秀才  判断互质.cpp": "By 秀才",
+    "1028 判断互质.cpp": "By DavidTesla",
+    "t1028.pas": "By Rh626",
+    "新建 文本文档 (3).txt": "By 852",
+    "ssj.pas": "By shenshijun0110",
+    "试题29.cpp": "By 黄星皓",
+    "L - 1028.txt": "By 万古洪荒",
+    "新建文本文档 (4).txt": "By dddd",
+    "(1028c)小学生AC.c": "By hjdmmm",
+    "最快算法.cpp": "By 唐元宸",
+    "1028判断互质（朴素算法50分）.cpp": "By tszx2016",
+    "test.cpp": "By 菜的抠脚",
+    "互质问题.cpp": "By qdsunbinhan@126.com",
+    "1028判断互质.cpp": "By tszx2016",
+    "未命名1.cpp": "By guoyue",
+    "互质数判断.cpp": "By tcs06358",
+    "pascal题解（ac）.txt": "By 403584200@qq.com",
+    "123.php": "By a2972982020",
+    "t1028(Other).pas": "By Rh626"
+  },
+  "样例输入": "36 56",
+  "数据范围限制": "1<=n,m<2^31",
+  "标题": "1028. 判断互质 (Standard IO)",
+  "输出": "如互质输出Yes，否则输出No。",
+  "样例输出": "No"
+}

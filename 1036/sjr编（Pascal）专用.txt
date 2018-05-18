@@ -1,0 +1,9 @@
+var n,m:longint;
+begin 
+readln(n);
+repeat
+m:=n mod 2;
+n:=n div 2;
+writeln('shang:',n,' yu:',m);
+until n=0;
+end.

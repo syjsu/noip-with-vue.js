@@ -1,0 +1,16 @@
+var
+ m,n,i,j:longint;
+ c:int64;
+begin
+ readln(n,m);
+ c:=1;
+ for i:=n downto n-m+1 do
+ begin
+  c:=c*i;
+  end;
+ for j:=1 to m do
+ begin
+  c:=c div j;
+  end;
+ writeln(c);
+end.

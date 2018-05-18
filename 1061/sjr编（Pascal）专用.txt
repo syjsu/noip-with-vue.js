@@ -1,0 +1,17 @@
+var c,s:string;
+begin
+readln(c);
+while c='Y' do
+begin
+readln(s);
+if s='NOIP@CCF' then
+begin
+writeln('Success');
+exit;
+end else
+begin
+writeln('Sorry');
+readln(c);
+end;
+end;
+end. 

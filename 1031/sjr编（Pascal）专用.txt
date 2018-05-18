@@ -1,0 +1,14 @@
+var n,l,m:longint;
+begin
+readln(n);
+for l:=1 to n do
+begin
+for m:=1 to n-l do
+write(' ');
+for m:=1 to l*2-1 do
+write('*');
+for m:=1 to n-l do
+write(' ');
+writeln;
+end;
+end.

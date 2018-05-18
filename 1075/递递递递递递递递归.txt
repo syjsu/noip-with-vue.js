@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+double f(int n,double x)
+{
+   if(n==1)return sqrt(1+x);
+   return sqrt(n+f(n-1,x));    
+}
+int main()
+{
+  int n;
+  double x;
+  scanf("%lf%d",&x,&n);
+  printf("%.2lf",f(n,x));  
+  return 0;
+}

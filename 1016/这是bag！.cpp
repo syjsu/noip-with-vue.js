@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+	int year,moth;
+	scanf("%d%d",&year,&moth);
+	if(year%4==0){
+		if(year%100==0){
+			if(moth==1)printf("31");
+			if(moth==2)printf("28");
+			if(moth==3)printf("31");
+			if(moth==4)printf("30");
+			if(moth==5)printf("31");
+			if(moth==6)printf("30");
+			if(moth==7)printf("31");
+			if(moth==8)printf("31");
+			if(moth==9)printf("30");
+			if(moth==10)printf("31");
+			if(moth==11)printf("30");
+			if(moth==12)printf("31");
+		}
+		else{
+			if(moth==1)printf("31");
+			if(moth==2)printf("29");
+			if(moth==3)printf("31");
+			if(moth==4)printf("30");
+			if(moth==5)printf("31");
+			if(moth==6)printf("30");
+			if(moth==7)printf("31");
+			if(moth==8)printf("31");
+			if(moth==9)printf("30");
+			if(moth==10)printf("31");
+			if(moth==11)printf("30");
+			if(moth==12)printf("31");
+		}
+	}
+	else{
+		if(moth==1)printf("31");
+			if(moth==2)printf("28");
+			if(moth==3)printf("31");
+			if(moth==4)printf("30");
+			if(moth==5)printf("31");
+			if(moth==6)printf("30");
+			if(moth==7)printf("31");
+			if(moth==8)printf("31");
+			if(moth==9)printf("30");
+			if(moth==10)printf("31");
+			if(moth==11)printf("30");
+			if(moth==12)printf("31");
+	}
+	return 0;
+}

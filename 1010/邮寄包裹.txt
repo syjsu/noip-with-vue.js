@@ -1,0 +1,55 @@
+#include<iostream>
+#include <fstream>  
+#include <iomanip> 
+
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int w;
+	cin>>w;
+	int k;
+	k=w/10;
+	switch (k)
+	{
+	case 0:
+		cout<<fixed<<setprecision(2)<<0.8*w+0.2<<endl;
+		break;
+	case 1:
+		cout<<fixed<<setprecision(2)<<0.75*(w-10)+0.2+8<<endl;
+		break;
+	case 2:
+		if(w==20)
+			{
+		        cout<<fixed<<setprecision(2)<<8.2+7.5<<endl;
+		        break;
+			}
+		else
+		{
+		  cout<<fixed<<setprecision(2)<<0.70*(w-20)+8.2+7.5<<endl;
+		  break;
+		}
+	/*case 3:
+			if(w==30)
+			{
+		        cout<<fixed<<setprecision(2)<<7+8.2+7.5<<endl;
+		        break;
+			}
+			else 
+			{
+				cout<<"Fail"<<endl;
+				break;
+			}*/
+	default:
+			if(w==30)
+			{
+		        cout<<fixed<<setprecision(2)<<7+8.2+7.5<<endl;
+		        break;
+			}
+		  cout<<"Fail"<<endl;
+		  break;
+	}
+
+	return 0;
+}

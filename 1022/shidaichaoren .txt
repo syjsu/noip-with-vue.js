@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+
+int main()
+{
+	int i,n;
+	int age;
+	double age1,sum=0;
+	cin>>n;
+	for (i=1;i<=n;i++)
+	{
+		cin>>age;
+		sum=sum+age;
+		age1=sum/n;
+	}
+	printf("%.2f",age1);
+	return 0;
+}

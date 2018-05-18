@@ -1,0 +1,6 @@
+var k,l:real;
+begin
+read(k,l);
+if (k>=-1) and (k<=1) and (l>=-1) and (l<=1) then write('Yes')
+else write('No');
+end.

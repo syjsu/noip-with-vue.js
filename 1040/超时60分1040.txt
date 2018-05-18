@@ -1,0 +1,23 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{long long a,b;
+cin>>a>>b;
+int p=0,pl=0;
+
+if (b%2==0&&a%2!=0) cout<<"No";
+else {
+for (int i=3;i<=b/3;i+=2)
+{ for (int j=4;j<=i/3;j++)
+   {if (i%j==0) {p=1;break;}}
+   if (p==0&&b%i==0&&a%i!=0) {cout<<i<<" ";pl=1;break;}    
+  p=0;
+  }
+if (pl==1) cout<<"No";
+else cout<<"Yes";}    
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}

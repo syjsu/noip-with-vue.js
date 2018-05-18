@@ -1,0 +1,5 @@
+var n:ansistring;
+begin
+read(n);
+write(n);
+end.

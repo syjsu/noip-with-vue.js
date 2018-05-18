@@ -1,0 +1,32 @@
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#include <ctime>
+#include <iostream>
+#include <algorithm>
+
+using namespace std ;
+
+struct node
+{
+	string name;
+	int value;
+}a[105];
+
+int n,k;
+
+bool cmp(node a,node b)
+{
+	return a.value<b.value;
+}
+
+int main()
+{
+	scanf("%d%d",&n,&k);
+	for (int i=0;i<n;i++)
+		cin>>a[i].name>>a[i].value;
+	sort(a,a+n,cmp);
+	cout<<a[k-1].name;
+	return 0;
+}

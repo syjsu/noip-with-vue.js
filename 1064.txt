@@ -1,0 +1,28 @@
+{
+  "输入": "一行一个正整数n。",
+  "题目描述": "输入n，编写程序输出斐波那契数列的第n项。其中斐波那契数列f(n)的定义如下：\nf(1)=0,f(2)=1        \nf(n)=f(n-1)+f(n-2)(n>=2)",
+  "标题": "1064. 计算斐波那契第n项 (Standard IO)",
+  "参考答案": {
+    "1064.c": "By Guess",
+    "noi1064.cpp": "By cnqdztp",
+    "递推循环最简做法1064.cpp": "By 13600366241",
+    "1064递归做法acYF .cpp": "By yyfsds",
+    "sjr64.pas": "By 1059420075",
+    "1064的题解（专为智障儿童准备的答案）.doc": "By xujingwen",
+    "feibonaqie.cpp": "By 郭子敬",
+    "q.cpp": "By tyoukyouhei",
+    "t1064.pas": "By Rh626",
+    "未命名2.cpp": "By 王志城",
+    "计算斐波那契第n项.cpp": "By 20160518yinhw",
+    "ssj.pas": "By shenshijun0110",
+    "Untitled1.cpp": "By 传说中的炮灰",
+    "1064（极简）.cpp": "By Youth丨吹雪",
+    "未命名1.cpp": "By Michael",
+    "1064.cpp": "By Mercy",
+    "新建 Microsoft Word 文档.doc": "By 狄仁杰"
+  },
+  "样例输入": "5",
+  "数据范围限制": "1<=n<=30",
+  "输出": " 输出一个数f(n)。",
+  "样例输出": "3"
+}

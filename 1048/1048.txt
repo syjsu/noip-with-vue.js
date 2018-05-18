@@ -1,0 +1,74 @@
+/*感觉数组处理方面没有优化到位，但是鉴于n不大于一百，这样也能过了，我就偷个懒了*/
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+#include <ctime>
+#include <iostream>
+#include <algorithm>
+
+using namespace std ;
+
+int map[105][105],n,t,wrong=0;;
+bool a[105],b[105],flag=true;;
+
+int main()
+{
+	memset(a,false,sizeof(a));
+	memset(b,false,sizeof(b));
+	scanf("%d",&n);
+	for (int i=0;i<n;i++)
+		for (int j=0;j<n;j++)
+			scanf("%d",&map[i][j]);
+	for (int i=0;i<n;i++)
+	{
+		t=0;
+		for (int j=0;j<n;j++)
+		{
+			if (map[i][j])
+				t++;
+		}
+		if (t%2==0)
+			a[i]=true;
+		else
+		{
+			flag=false;
+			a[i]=false;
+			wrong++;
+		}
+	}
+	for (int i=0;i<n;i++)
+	{
+		t=0;
+		for (int j=0;j<n;j++)
+		{
+			if (map[j][i])
+				t++;
+		}
+		if (t%2==0)
+			b[i]=true;
+		else
+		{
+			flag=false;
+			b[i]=false;
+			wrong++;
+		}
+	}
+	if (flag)
+		printf("OK");
+	else
+	{
+		if (wrong!=2)
+			printf("Corrupt");
+		else
+		{
+			for (int i=0;i<n;i++)
+			{
+				for (int j=0;j<n;j++)
+					if (!a[i]&&!b[j])
+						printf("%d %d",i+1,j+1);
+			}
+		}
+	}
+	return 0;
+}

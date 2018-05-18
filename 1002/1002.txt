@@ -1,0 +1,27 @@
+1.用海伦公式，三角形面积=p(p-a)(p-b)(p-c)开根号，其中p是三角形的半周长
+c++版:
+#include"iostream"
+#include"cstdio"
+#include"cmath"
+using namespace std;
+int main()
+{
+ double a,b,c,p;
+ cin>>a>>b>>c;
+ p=(a+b+c)/2;
+ printf("%.4lf",sqrt(p*(p-a)*(p-b)*(p-c)));
+ return 0;
+}
+2.用正余弦定理，先用余弦定理求出其中一个角cosA=(b*b+c*c-a*a)/2bc,再用S=1/2*sinA*b*c就面积
+#include"cstdio"
+#include"iostream"
+#include"cmath"
+using namespace std;
+int main()
+{
+ double a,b,c,A;
+ cin>>a>>b>>c;   
+ A=acos((b*b+c*c-a*a)/(2*b*c));
+ printf("%.4lf",b*c*sin(A)/2); 
+ return 0;
+}

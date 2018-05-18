@@ -1,0 +1,43 @@
+#include<cstdio>
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+	int n,j,i,s[100000];
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		char s1[1001],s2[1001];
+		int a[1001],b[1001],c[1001],lena,lenb,lenc;
+		gets(s1);gets(s2);
+		lena=strlen(s1);lenb=strlen(s2);
+		for(j=0;j<=lena-1;j++)a[lena-j]=s1[j]-'0';
+	    for(j=0;j<=lenb-1;j++)b[lenb-j]=s2[j]-'0';
+		lenc=1;
+		while(lenc<=lena||lenc<=lenb)
+		{
+			c[lenc]=a[lenc]+b[lenc];
+			if(c[lenc]>=10)
+			{
+			   c[lenc+1]++;
+			   c[lenc]%=10;
+			}
+			lenc++;
+		}
+		while(c[lenc]==0)lenc--;
+		for(i=lenc;i>=1;i--)cout<<c[i];
+		for(i=1;i<=lenc;i++);
+		{
+			s[i]+=c[i];
+			if(s[i]>=10)s[i+1]++;
+		}
+	}
+	int ans=100000;
+	for(int i=100000;i>=2;i--)
+	{
+		while(s[i]==0)ans--;
+	}	
+	for(int i=ans;i>=1;i--)cout<<s[i];
+	return 0;
+}

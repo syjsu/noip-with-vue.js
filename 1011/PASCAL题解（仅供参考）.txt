@@ -1,0 +1,12 @@
+program project1;
+var
+  x,y:real;
+begin
+  readln(x,y);//仅供参考
+  if (x>=-1) and (x<=1) and (y>=-1) and (y<=1) then
+    writeln('Yes')
+  else
+    writeln('No');
+  readln
+end.
+

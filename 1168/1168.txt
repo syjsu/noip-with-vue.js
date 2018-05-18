@@ -1,0 +1,25 @@
+var
+  a:array[1..100000] of longint;
+  i,n,max,z:longint;
+procedure main(x,y,z:longint);
+var
+  s:longint;
+begin
+  if z=n+1 then
+    begin
+      if x>y then s:=x else s:=y;
+      if s<max then max:=s;
+      exit;
+    end;
+  if (x>max)or(y>max) then exit;
+  main(x+a[z],y,z+1);
+    main(x,y+a[z],z+1);
+end;
+begin
+  readln(n);
+  for i:=1 to n do
+    read(a[i]);
+  max:=maxlongint;
+  main(0,0,1);
+  writeln(max);
+end.

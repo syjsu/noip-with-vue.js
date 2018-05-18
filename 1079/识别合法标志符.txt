@@ -1,0 +1,31 @@
+
+
+
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+char a[1000];
+int main(){
+	int i;
+	while(cin>>a){
+		int len=strlen(a);//strlen求字符串 长度的函数
+		 
+		if(a[0]>='0'&&a[0]<='9'){  //判断字符串的第一个字符是不是数字，如果是就输出NO  
+			cout<<"no"<<endl;
+			continue;
+		}
+		
+		for(i=0;i<len;i++){
+			
+			if(a[i]>='a'&&a[i]<='z') continue;//判断当前字符是不是小写字母 
+			if(a[i]>='A'&&a[i]<='Z') continue;//判断当前字符是不是大写字母 
+			if(a[i]>='0'&&a[i]<='9') continue;//判断当前字符是不是数字 
+			if(a[i]=='_')continue;//判断当前字符是不是下划线 
+			
+			break;  //如果前面条件都不满足，说明当前字符是一个非法字符。 
+		}
+		if(i==len) cout<<"yes"<<endl;
+		else  cout<<"no"<<endl;
+	}
+}

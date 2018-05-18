@@ -1,0 +1,8 @@
+var n,m,k:longint;
+begin
+read(n,m,k);
+if (n+m<k) or (n+k<m) or (m+k<n) then write('NO')
+else if (m=k) and (k=n)then write('Equilateral')
+else if (k*k+n*n=m*m) or (k*k+m*m=n*n) or (n*n+m*m=k*k) then write('Right')
+else write('General');
+end.

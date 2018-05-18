@@ -1,0 +1,9 @@
+program LX;
+VAR A,B,C,D,E:CHAR ;
+A:='NI';
+B:='KAI';
+C:='XIN';
+D:='JIU';
+E:='HAO';
+WRITE(A,B,C,D,E);
+END.

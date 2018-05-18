@@ -1,0 +1,6 @@
+var x1,x2,y1,y2,a:double;
+begin
+ read(x1,y1,x2,y2);
+ a:=abs(x1-x2)+abs(y1-y2);
+ write(a:0:3);
+end.

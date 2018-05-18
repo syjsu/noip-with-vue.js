@@ -1,0 +1,41 @@
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<algorithm>
+#include<string>
+#include<cstring>
+using namespace std;
+inline int read()
+{
+	int x=0,f=1; char c=getchar();
+	while(c<'0' || c>'9'){if(c=='-') f=-1; c=getchar();}
+	while(c>='0' && c<='9'){x=x*10+c-'0'; c=getchar();}
+	return x*f;
+}
+int map[1002][1002],ans[1002][1002],h[1002][1002],s[1002][1002];
+int main()
+{
+	int n,m,r,c;
+	cin>>n>>m>>r>>c;
+	int maxn=0;
+	for(int i=1;i<=n;i++)
+	{
+		for(int j=1;j<=m;j++)
+		{
+			map[i][j]=read();
+			//if(i<=r) s[i][j]=s[i-1][j]+map[i][j];
+			//else s[i][j]=s[i-1][j]+map[i][j]-map[i-r][j];
+			if(j<=c) h[i][j]=h[i][j-1]+map[i][j];
+			else h[i][j]=h[i][j-1]+map[i][j]-map[i][j-c];
+			ans[i][j]=ans[i-1][j]+h[i][j];
+			if(i>r) ans[i][j]-=h[i-r][j];
+			//ans[i][j]=ans[i-1][j]-h[i-2][j]+h[i][j];
+			maxn=max(maxn,ans[i][j]);
+			//cout<<h[i][j]<<" ";
+			//cout<<ans[i][j]<<" ";
+		}
+		//cout<<endl;
+	}
+	cout<<maxn<<endl;
+	return 0;
+}

@@ -1,0 +1,14 @@
+第三组输入数据的32行最后是v，第33行是一个v。
+第三组数据输出的1043位置多了一个v。
+
+diffrent:s1[1043]=w s2[1043]=v
+diffrent:s1[1044]=q s2[1044]=w
+diffrent:s1[1045]=p s2[1045]=q
+diffrent:s1[1046]=b s2[1046]=p
+diffrent:s1[1047]=o s2[1047]=b
+diffrent:s1[1048]=y s2[1048]=o
+diffrent:s1[1049]=h s2[1049]=y
+diffrent:s1[1050]=q s2[1050]=h
+diffrent:s1[1051]=e s2[1051]=q
+diffrent:s1[1052]=l s2[1052]=e
+…………

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+double bl()
+{
+	 char a[100];
+	 scanf("%s",&a);
+	 if (a[0]=='*')
+	 {
+		 return bl()*bl();
+	 }
+	 else if (a[0]=='+')
+	 {
+		 return bl()+bl();
+	 }
+	 else if (a[0]=='-')
+	 {
+		 return bl()-bl();
+	 }
+	 else if (a[0]=='/')
+	 {
+		 return bl()/bl();
+	 }
+	 else
+	 {
+		 return atof(a);
+	 }
+}
+int main()
+{
+	double b;
+	b=bl();
+	printf("%f",b);
+}

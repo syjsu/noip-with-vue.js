@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	/*------------------input-------------------*/
+	short n,m;char a[105][105];
+	short b[105][105];
+	cin>>n>>m;
+	memset(a,' ',sizeof(a));
+	memset(b,0,sizeof(b));
+	for(short i=1;i<=n;i++)
+	for(short j=1;j<=m;j++)
+	{
+		cin>>a[i][j];
+	}
+	/*------------------search------------------*/
+	for(short i=1;i<=n;i++)
+	for(short j=1;j<=m;j++)
+	{
+		if(a[i][j]=='*')
+		/*------------change------------*/
+		{
+		    if(a[i-1][j-1]!='*')b[i-1][j-1]+=1;
+		    if(a[i-1][j]!='*')b[i-1][j]+=1;
+		    if(a[i-1][j+1]!='*')b[i-1][j+1]+=1;
+		    if(a[i][j-1]!='*')b[i][j-1]+=1;
+		    if(a[i][j+1]!='*')b[i][j+1]+=1;
+		    if(a[i+1][j-1]!='*')b[i+1][j-1]+=1;
+		    if(a[i+1][j]!='*')b[i+1][j]+=1;
+		    if(a[i+1][j+1]!='*')b[i+1][j+1]+=1;
+		} 
+	}
+	/*------------------output------------------*/
+	for(short i=1;i<=n;i++)
+	{
+		for(short j=1;j<=m;j++)
+	    {
+	    	if(a[i][j]=='*')
+		    {
+		    	cout<<"*";
+			    continue;
+		    }
+		    cout<<b[i][j];
+	    }
+	    cout<<endl;
+	}
+	
+	return 0;
+}

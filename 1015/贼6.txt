@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+	int s;
+	cin>>s;
+	if (s==1)
+	{
+		cout<<"Monday"<<endl;
+	} 
+	else if(s==2)
+	{
+		cout<<"Tuesday"<<endl;
+	}
+	else if(s==3)
+	{
+		cout<<"Wednesday"<<endl;
+	}
+	else if(s==4)
+	{
+		cout<<"Thursday"<<endl;
+	}
+	else if(s==5)
+	{
+		cout<<"Friday"<<endl;
+	}
+	else if (s==6)
+	{
+		cout<<"Saturday"<<endl;
+	}
+	else if (s==7)
+	{
+		cout<<"Sunday"<<endl;
+	}
+	return 0;
+}

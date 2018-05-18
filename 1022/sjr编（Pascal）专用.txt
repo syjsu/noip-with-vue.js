@@ -1,0 +1,17 @@
+var n,i,k:longint;
+a:array[1..10000] of longint;
+begin
+readln(n);
+for i:=1 to n do 
+begin
+readln(a[i]);
+end;
+for i:=1 to n do
+begin
+k:=k+a[i];
+end;
+write(k/n:0:2);
+end.
+
+
+

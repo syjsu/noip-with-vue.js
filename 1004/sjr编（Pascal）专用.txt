@@ -1,0 +1,7 @@
+var m,n,k,x,y:longint;
+begin
+read(m,n,k);
+x:=m div k;
+y:=n div k;
+write(x*y);
+end.

@@ -1,0 +1,21 @@
+program ex;
+var a:integer;
+begin
+ writeln('[1] apples');
+ writeln('[2] pears');
+ writeln('[3] oranges');
+ writeln('[4] grapes');
+ writeln('[0] Exit');
+ read(a);
+ case a of
+ 1:write('price=',3.0:0:1);
+ 2:write('price=',2.5:0:1);
+ 3:write('price=',4.1:0:1);
+ 4:write('price=',10.2:0:1);
+ 0:halt;
+ else write('price=',0);
+end;
+end.
+
+
+

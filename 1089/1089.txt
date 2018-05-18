@@ -1,0 +1,70 @@
+#include<iostream>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+
+string re,a;
+int i,j,k,l;
+
+string add(std::string a,std::string re){
+	if(a.size()>re.size() )
+	{
+		while(a.size()!=re.size() )
+		{
+			re+="0";
+			for(i=re.size()-2;i>=0;i--)
+			{
+				re[i+1]=re[i];	
+			}
+			re[0]='0';
+		}
+	}//对齐个位 
+	if(a.size()<re.size() )
+	{
+		while(a.size()!=re.size() )
+		{
+			a+="0";
+			for(i=a.size()-2;i>=0;i--)
+			{
+				a[i+1]=a[i];	
+			}
+			a[0]='0';
+		}
+	}//对齐个位 
+	for(i=0;i<re.size();i++)
+		re[i]-=48;
+	for(i=0;i<a.size();i++)
+		a[i]-=48;//方便处理
+	for(i=a.size()-1;i>=0;i--)
+	{
+		re[i]+=a[i];//加法
+		if(re[i]>=10)
+		{
+			re[i]-=10;
+			if(i==0)
+			{
+				re+="0";
+				for(j=re.size()-2;j>=0;j--)
+				re[j+1]=re[j];
+				re[0]=1;
+			}
+			else
+			re[i-1]++;
+		}//进位 	
+	}
+	for(i=0;i<re.size();i++)
+		re[i]+=48;
+	return re;
+} 
+
+int main(){
+	int k;
+	cin>>k;
+	for(l=0;l<k;l++)
+	{
+		cin>>a>>re;
+		re=add(a,re);
+		cout<<re<<endl;
+	}
+	return 0;
+}

@@ -1,0 +1,29 @@
+{
+  "输入": "输入一个正整数。",
+  "题目描述": "输入一个正整数n，输出高为n的由*组成的等腰三角形。",
+  "参考答案": {
+    "fd.cpp": "By 牛的传说",
+    "(1031c)小学生AC.c": "By hjdmmm",
+    "sanjiaoxing.cpp": "By 郭子敬",
+    "jack等腰三角形.cpp": "By jack_魏",
+    "秀才  等腰三角形.cpp": "By 秀才",
+    "main34.cpp": "By Simon King",
+    "Kuaiwan.exe": "By 1059420075",
+    "等腰三角形 1031.txt": "By 贾剑阳",
+    "棒棒棒。cpp.cpp": "By dahaixinxier",
+    "ssj.pas": "By shenshijun0110",
+    "未命名2.cpp": "By 李长乐",
+    "Untitled1.cpp": "By lllllllll",
+    "Billy.pas": "By sxlch",
+    "1031等腰三角形.cpp": "By 迎风布阵",
+    "未命名29.cpp": "By 王志城",
+    "(__)-(__).cpp": "By chinazqz",
+    "等腰三角形.cpp": "By sean",
+    "sjr编（Pascal）专用.txt": "By 2055186079"
+  },
+  "样例输入": "3",
+  "数据范围限制": "1<=n<=20",
+  "标题": "1031. 等腰三角形 (Standard IO)",
+  "输出": "输出高为n的由*组成的等腰三角形。",
+  "样例输出": "  *\n ***\n*****"
+}

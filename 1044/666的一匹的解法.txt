@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a[100010],b[10010];
+int main()
+{
+	int n,m;bool flag;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i];
+	}
+	a[n+1]=1000000010;a[0]=-1000000010;
+	cin>>m;
+	for(int i=1;i<=m;i++)
+	{
+		cin>>b[i];flag=0;
+		for(int k=0;k<=n;k++)
+		{
+			if(flag)break;
+			if(a[k]<b[i]&&a[k+1]>=b[i])
+			{
+				if(abs(a[k]-b[i])<=abs(a[k+1]-b[i]))
+				{
+					b[i]=a[k];
+				}
+				else b[i]=a[k+1];
+				flag=1;
+			}
+		}
+	}
+	for(int o=1;o<=m;o++)
+	{
+		cout<<b[o]<<endl;
+	}
+	return 0;
+}
